@@ -1,0 +1,227 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Slider using Flickity Plugin | HackerRahul.com</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <!-- <link rel="stylesheet" href="./countdown 2/css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<style media="screen">
+  .carousel-cell4 {
+    width: 100%;
+    height: 90%;
+   /* padding: 0px 0px 0px 20px; */
+
+  }
+
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+  }
+
+  @media screen and (max-width:1231px) and (min-width:1000px) {
+    .carousel-cell {
+      width: 35%;
+    }
+  }
+
+  @media screen and (max-width:1000px) and (min-width:890px) {
+    .carousel-cell {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width:890px) and (min-width: 750px) {
+    .carousel-cell {
+      width: 48%;
+    }
+  }
+
+  @media screen and (max-width:750px) and (min-width:635px) {
+    .carousel-cell {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width:635px) and (min-width:525px) {
+    .carousel-cell {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width:525px) and (min-width:460px) {
+    .carousel-cell {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width:460px) {
+    .carousel-cell {
+      width: 100%;
+    }
+  }
+
+
+
+
+  /* @media screen and (max-width:1150px) {
+      .carousel-cell {
+    width: 51%;
+    }
+    } */
+</style>
+
+<body>
+  <h1 class="w3-center">Simple Slider using Flickity Plugin By HACKERRAHUL</h1>
+  <div class="carousel smallcarousel"
+    data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true,"prevNextButtons": false, "pageDots": false }'>
+    <div class="carousel-cell">
+      <!-- <img class="w3-image" src="https://smash-images.photobox.com/original/5f04c1b41fd48d1b10ff27dfc90548bf13608845_Large-Print-lifestyle-3_1-2600.jpg"> -->
+      <div class="cta1   m-0 p-0">
+        <div class="row  " style="margin:auto ;height: 100%;">
+            <div
+                class="col-sm-12  d-flex justify-content-lg-center justify-content-center align-items-center mt-sm-4 cardstyle1 ">
+                <div class="card border-0 text-center  ">
+                    <div
+                        class="card-body   rounded-circle m-0 p-0 d-flex flex-column align-items-center justify-content-center">
+                        <img class="card-img-top" src="./CTA/secure.png" alt="Card image cap">
+                        <p class="card-title py-lg-3" style="font-family: flink bold; font-size:1.9rem;">
+                            100% SECURE</p>
+                        <p class="card-text px-lg-4" style="font-family: flink regular;">Contract code
+                            full
+                            audited
+                            by <strong style="font-family: flink bold">solid
+                                proof
+                            </strong> and shown to be
+                            100% secure.</p>
+                        <i class="fa-solid fa-circle-down" style="font-size:25px"></i>
+                        <p class="mt-1"><a href="#"
+                                style="border-bottom:2px solid rgb(95, 95, 95);font-weight:10;font-family: flink bold; text-decoration:none;color:rgb(73, 70, 70)">DOWNLOAD
+                                AUDIT</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="cta1   m-0 p-0">
+        <div class="row  " style="margin:auto ;height: 100%;">
+
+            <div
+                class="col-sm-12   d-flex justify-content-lg-center justify-content-center align-items-center mt-4   cardstyle2">
+                <div class="card border-0 text-center ">
+                    <div
+                        class="card-body   rounded-circle  d-flex flex-column align-items-center justify-content-center">
+                        <img class="card-img-top" src="./CTA/verified.png" alt="Card image cap">
+                        <p class="card-title py-lg-3" style="font-family: flink bold; font-size:1.9rem;">
+                            100% VERIFIED
+                        </p>
+                        <p class="card-text px-lg-4" style="font-family: flink regular;">Team fully
+                            verified by
+                            <strong style="font-family: flink bold">
+                                coinsnoper</strong> to ensure anti-rug and
+                            complete project
+                            security.
+                        </p>
+                        <i class="fa-solid fa-circle-down" style="font-size:25px"></i>
+                        <p class="mt-1 "><a href="#"
+                                style="border-bottom:2px solid rgb(95, 95, 95);font-family: flink bold; text-decoration:none;color:rgb(73, 70, 70);font-weight: 10;">DOWNLOAD
+                                WHITEPAPER</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="carousel-cell">
+      <div class=" cta2  m-0 p-0 ">
+        <div class="row " style="margin:auto;height: 100%;">
+            <div
+                class="col-sm-12  d-flex justify-content-center align-items-center mt-sm-4 justify-content-lg-center  style1cta2 ">
+                <div class="card border-0 text-center ">
+                    <div
+                        class="card-body  rounded-circle d-flex flex-column align-items-center justify-content-center">
+                        <p class="card-title py-lg-3" style="font-family: flink bold;font-size: 1.9rem;">
+                            JOIN OUR PRESALE
+                        </p>
+                        <p class="card-text px-lg-4" style="font-family: flink regular;">Lorem ipsum
+                            dolor sit
+                            amet
+                            consectetur adipisicing
+                            elit. Magnam
+                            reprehenderit saepe sint vel dignissimos minus cum corrupti neque?</p>
+                        <div>
+                            <i class="fa-solid fa-circle-right" style="font-size: 25px;"></i>
+                            <a href="#"
+                                style="border-bottom:2px solid rgb(95, 95, 95);font-family: flink bold; text-decoration:none;color:rgb(73, 70, 70);font-weight: 10; font-size: 1.2rem;">START
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="carousel-cell">
+      <div class=" cta2  m-0 p-0 ">
+        <div class="row " style="margin:auto;height: 100%;">
+            <div
+                class="col-sm-12   d-flex justify-content-lg-center justify-content-center align-items-center mt-4   style2cta2">
+                <div class="card border-0 text-center ">
+                    <div
+                        class="card-body   rounded-circle  d-flex flex-column align-items-center justify-content-center">
+                        <p class="card-title py-lg-3 px-lg-4"
+                            style="font-family: flink bold; font-size: 1.9rem;">GET IN EARLY
+                            WITH<br> <strong style="font-family: DunbarTall-ExtraBold;">CARROT</strong>
+                            PRESALE
+                        </p>
+                        <div>
+                            <i class="fa-brands fa-ethereum" style="font-size: 30px;"></i>
+                            <a href="#"
+                                style=" text-decoration:none;color:black;font-weight: bold;font-family: flink bold; font-size: 1rem;">BUY
+                                WITH
+                                <strong style="font-family: DunbarTall-ExtraBold;">ETH</strong></a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-credit-card-front" style="font-size: 25px;"></i>
+                            <a href="#"
+                                style="text-decoration:none;color:black ;font-weight: bold;font-size: 1rem;font-family: flink bold; ">BUY
+                                ETH
+                                WITH
+                                <strong style="font-family: DunbarTall-ExtraBold;">CARD</strong></a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-dollar-sign" style="font-size: 25px;"></i>
+                            <a href="#"
+                                style=" text-decoration:none;color:black ;font-weight: bold; font-size: 1rem;font-family: flink bold;">BUY
+                                WITH
+                                <strong style="font-family: DunbarTall-ExtraBold;">USDT</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+
+
+      <script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

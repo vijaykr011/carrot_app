@@ -1,0 +1,15 @@
+BG Color Code = #d9783a
+
+
+Client Postal
+----------------
+As a client this will enable you to track any research projects you have in action, request realtime research from our taste algorithm and track any brand mentions in the community
+
+
+Tastemaker Portal
+------------------
+As a tastemaker you will be able to keep track of your rewards, request for opinions, see brand offers and how accurate your opinion has been
+
+Research Builder
+------------------
+Our research builder enables you to create a market research project through a few simple steps. Simply define your target audience silos, product type, type of audience,  and the specific questions you wish to ask and we’ll action it within 72 hours.

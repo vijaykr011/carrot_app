@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./countdown 2/css/style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <title>Horizontal Scrolling</title>
+    <style type="text/css">
+        /* * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            min-height: 100%;
+        } */
+
+
+        /* Details (Ignore this!) */
+
+
+
+        #panel-1 {
+            /* background-color: black;
+            color: white; */
+        }
+
+        #panel-2 {
+            /* background-color: magenta; */
+            /* color: yellow; */
+        }
+
+        /* #panel-3 {
+            background-color: darkblue;
+            color: lightgreen;
+        }
+
+        #panel-4 {
+            background-color: pink;
+            color: brown;
+        }
+
+        #panel-5 {
+            background-color: darkred;
+            color: cyan;
+        } */
+
+        /* #containerpart {
+            height: 100%;
+            overflow-y: scroll;
+            width: 100%;
+            overflow-x: hidden;
+        } */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="col-sm-12 parallaxcontainer" style="height: 100vh;border: 1px solid black;">
+        <div class="col-sm-12" style="height:600px;padding: 0px 20px;margin: 0 auto;position: relative;">
+            <div id="fillingscrolldiv" class="fillingscrolldiv1" onscroll="fillingscroll()"
+                    style="position: absolute;width:100%;z-index:99;overflow-x: hidden;top:0px;left:0px;height:540px;background-color: transparent;overflow-y: scroll;">
+                    <div style="height:3000px" >
+
+                        <img src="./tokenomics/2.png" class="c2" />
+
+
+                        <img src="./tokenomics/3.png" class="c3" />
+
+
+                        <img src="./tokenomics/4.png" class="c4" />
+
+
+                        <img src="./tokenomics/5.png" class="c5" />
+
+
+                    </div>
+                </div>
+            <div class="row" id="fillingdivscrollsmall">
+                <div  style="display:inline-block;float: left;background-color: red;width:40%;height:450px;padding-top: 120px;">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv" data-bs-ride="carousel"
+                        style="width:100px;margin: 0 auto;background-color: yellow;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div style="width: 100%;height: 200px;">
+                                    <div
+                                        style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                        <span style="font-size: 22px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span style="font-size: 16px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div style="width: 100%;height: 200px;">
+                                    <div
+                                        style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                        <span style="font-size: 20px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span style="font-size: 15px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div style="width: 100%;height: 200px;">
+                                    <div
+                                        style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                        <span style="font-size: 20px;font-weight: 500;font-family: flink bold;">$CTR
+                                            -
+                                            20</span><br />
+                                        <span style="font-size: 15px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" backimage"  style="display: inline-block;height: 600px;background-color: red;width:60%;">
+
+                    <div id="fillingscrolldiv2" class="fillingscrolldiv3" onscroll="fillingscrollsmall()"
+                        style="position: absolute;width:160px;z-index:99;overflow-x: hidden; left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto; height:380px;overflow-y: scroll;">
+                        <div style="height:3000px">
+
+                            <img src="./tokenomics/full_c2.png" class="c2_1" />
+
+
+                            <img src="./tokenomics/full_c3.png" class="c3_1" />
+
+
+                            <img src="./tokenomics/full_c4.png" class="c4_1" />
+
+
+                            <img src="./tokenomics/full_c5.png" class="c5_1" />
+
+
+                        </div>
+                    </div>
+
+                    <!-- <img src="./tokenomics/full_c2.png" style="position:absolute;zindex:99;width:250px;top:301px;left:0%;"/>, -->
+                    <div class="section9texttwo" style="pointer-events:none;">
+                        <div class="col-sm-12 filltext1_1" style="text-align: center;padding-top: 50px;">
+                            <span style="font-size: 15px;">R & D</span><b
+                                style="font-size: 16px;font-weight: 900;font-family: flink black;">
+                                5%</b>
+                        </div>
+                        <div class="col-sm-12 filltext2_1"
+                            style="text-align: center;padding: 10px 0px 5px 0px;line-height: 17px">
+                            <span style="font-size: 15px;">PROFIT SHARE POOL<br /><span
+                                    style="font-size: 16px;font-family: flink black;"><b>10%</b></span></span>
+                        </div>
+                        <div class="col-sm-12 filltext3_1"
+                            style="text-align: center;padding: 35px 0px 5px 0px;line-height: 20px">
+                            <span style="font-size: 15px;">DEVELOPMENT<br /><span
+                                    style="font-size: 16px;font-family: flink black;"><b>30%</b></span></span>
+                        </div>
+                        <div class="col-sm-12 filltext4_1" style="text-align: center;padding: 60px 0px 5px 0px">
+                            <span style="font-size: 15px;">PUBLIC SALE<br /><span
+                                    style="font-size: 16px;font-family: flink black;"><b>45%</b></span></span>
+                        </div>
+                        <div class="col-sm-12" style="text-align: center;padding: 45px 0px 0px 0px;">
+                            <span style="font-size: 15px;">PRIVATE SALE</span><b
+                                style="font-size: 16px;font-family: flink black;">
+                                10%</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let fillingscrolldiv = document.querySelector("#fillingscrolldiv");
+            let fillingscrolldivsmall =document.querySelector('#fillingscrolldiv2');
+            function fillingscroll() {
+                console.log(document.querySelector("#fillingscrolldiv").scrollTop);
+                document.querySelector('.c2').style.position = fillingscrolldiv.scrollTop > 299 ? 'sticky' : 'absolute';
+                document.querySelector('.c2').style.top = fillingscrolldiv.scrollTop > 299 ? '300px' : '600px';
+                document.querySelector('.filltext4').style.opacity = fillingscrolldiv.scrollTop > 299 ? 1 : 0.5;
+                document.querySelector('.c3').style.position = fillingscrolldiv.scrollTop > 753 ? 'sticky' : 'absolute';
+                document.querySelector('.c3').style.top = fillingscrolldiv.scrollTop > 753 ? '146px' : '950px';
+                document.querySelector('.filltext3').style.opacity = fillingscrolldiv.scrollTop > 753 ? 1 : 0.5;
+                document.querySelector('.c4').style.position = fillingscrolldiv.scrollTop > 1487 ? 'sticky' : 'absolute';
+                document.querySelector('.c4').style.top = fillingscrolldiv.scrollTop > 1487 ? '62px' : '1550px';
+                document.querySelector('.filltext2').style.opacity = fillingscrolldiv.scrollTop > 1487 ? 1 : 0.5;
+                document.querySelector('.c5').style.position = fillingscrolldiv.scrollTop > 2124 ? 'sticky' : 'absolute';
+                document.querySelector('.c5').style.top = fillingscrolldiv.scrollTop > 2124 ? '25px' : '2150px';
+                document.querySelector('.filltext1').style.opacity = fillingscrolldiv.scrollTop > 2124 ? 1 : 0.5;
+            }
+            function fillingscrollsmall() {
+                console.log(fillingscrolldivsmall.scrollTop);
+                document.querySelector('.c2_1').style.position = fillingscrolldivsmall.scrollTop > 20 ? 'sticky' : 'absolute';
+                document.querySelector('.c2_1').style.top = fillingscrolldivsmall.scrollTop > 20 ? '226px' : '600px';
+                document.querySelector('.filltext4_1').style.opacity = fillingscrolldivsmall.scrollTop > 20 ? 1 : 0.5;
+                document.querySelector('.c3_1').style.position = fillingscrolldivsmall.scrollTop > 200 ? 'sticky' : 'absolute';
+                document.querySelector('.c3_1').style.top = fillingscrolldivsmall.scrollTop > 200 ? '128px' : '950px';
+                document.querySelector('.filltext3_1').style.opacity = fillingscrolldivsmall.scrollTop > 200 ? 1 : 0.5;
+                document.querySelector('.c4_1').style.position = fillingscrolldivsmall.scrollTop > 300 ? 'sticky' : 'absolute';
+                document.querySelector('.c4_1').style.top = fillingscrolldivsmall.scrollTop > 300 ? '74px' : '1550px';
+                document.querySelector('.filltext2_1').style.opacity = fillingscrolldivsmall.scrollTop > 300 ? 1 : 0.5;
+                document.querySelector('.c5_1').style.position = fillingscrolldivsmall.scrollTop > 370 ? 'sticky' : 'absolute';
+                document.querySelector('.c5_1').style.top = fillingscrolldivsmall.scrollTop > 370 ? '51px' : '2150px';
+                document.querySelector('.filltext1_1').style.opacity = fillingscrolldivsmall.scrollTop > 370 ? 1 : 0.5;
+            }
+        </script>
+        </div>
+        <!-- <div class="col-sm-12"  style="max-height: 600px;overflow-y:scroll;overflow-x:hidden;">
+        <div class="col-sm-12" style="height:2000px;position: relative;">
+            <div style="height: 100%;width:100%;background-color: red;"></div>
+            <div class="col-sm-12" style="height:600px;background-color:transparent;position: absolute;top:500px;z-index:1001;">
+                <div class="row">
+                    <div class="col-sm-7"
+                        style="display: flex;justify-content:center;align-items:center;position: relative;">
+                    </div>
+                    <div class="col-sm-5 backimage2">
+                        <div class="section9text">
+
+                            <div class="col-sm-12"
+                                style="text-align: start;padding: 245px 0px 5px 30px;opacity: 0.5">
+                                <span style="font-size: 21px;">DEVELOPMENT</span>
+                            </div>
+                            <div class="col-sm-12"
+                                style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                            </div>
+
+                        </div>
+                        <div class="section9texttwo">
+                            <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                <span style="font-size: 21px;">R & D</span><b
+                                    style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                    5%</b>
+                            </div>
+                            <div class="col-sm-12"
+                                style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                        style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                            </div>
+                            <div class="col-sm-12"
+                                style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                        style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                            </div>
+                            <div class="col-sm-12"
+                                style="text-align: center;padding: 90px 0px 5px 0px;opacity: 0.5">
+                                <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                        style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                            </div>
+                            <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                    style="font-size: 28px;font-family: flink black;">
+                                    10%</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+    <!-- <div class="d-flex flex-wrap">
+        <div style="height:350px;width:470px;background-color:red;"></div>
+        <div style="height:275px;width:370px;background-color:yellow;"></div>
+        <div style="height:215px;width:440px;background-color:blue;"></div>
+        <div style="height:215px;width:305px;background-color:brown;"></div>
+        <div style="height:350px;width:470px;background-color:blue;"></div>
+        <div style="height:215px;width:440px;background-color:red;"></div>
+        <div style="height:275px;width:370px;background-color:yellow;"></div>
+        <div style="height:215px;width:300px;background-color:brown;"></div>
+    </div> -->
+
+
+        <!-- <div class="col-sm-12" style="padding: 0px 20px;overflow-x: hidden;position: relative;"> -->
+        <!--
+        <div class="col-sm-12" style="height:600px;background-color:transparent;position: absolute;top:0px;z-index: 1000;">
+            <div class="row">
+                <div class="col-sm-7"
+                    style="display: flex;justify-content:center;align-items:center;position: relative;">
+                    <div class="relativepara1"
+                        style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                        Research and development by marketing and psychologist phds to assist in
+                        creating surveys to shape the machine learning algorith,
+                    </div>
+                    <div class="relativepara1"
+                        style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                    </div>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                        data-bs-ride="carousel" style="width:160px;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                        <div style="width: 160px;height: 250px;">
+                            <div
+                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+
+                                <i class="fa-brands fa-ethereum" style="font-size:80px"></i>
+                            </div>
+                            <div
+                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                    -
+                                    20</span><br />
+                                <span
+                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                    TOKEN</span>
+                            </div>
+                        </div>
+                        <div class="mx-4" style="width: 160px;height: 250px;">
+                            <div
+                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                <i class="fa-solid fa-dollar-sign" style="font-size:80px"></i>
+                            </div>
+                            <div
+                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                    BILLION</span><br />
+                                <span
+                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                    SUPPLY</span>
+                            </div>
+                        </div>
+                        <div style="width: 160px;height: 250px;">
+                            <div
+                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                <img src="./tokenomics/carrot_dark.png" style="height: 80px;" />
+                            </div>
+                            <div
+                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                <span
+                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                <span
+                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                    TOKEN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-5 backimage">
+                    <div class="relativepara"
+                        style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:110px;right:60px;font-family: flink regular;">
+                        The profit pool that will pay the tastemakers their incentives
+                    </div>
+                    <div class="relativepara"
+                        style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:150px;left:230px;background-color: grey;">
+                    </div>
+                    <div class="section9text">
+                        <div class="col-sm-12"
+                            style="text-align: start;align-items: center;padding: 5px 0px 5px 70px;opacity: 0.5;">
+                            <span style="font-size: 21px;">R & D</span><b
+                                style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                5%</b>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding: 5px 0px 5px 5px;opacity: 0.5">
+                            <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                            <span style="font-size: 28px;font-family: flink black;"><b>10%</b></span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding: 55px 0px 5px 30px;opacity: 0.5">
+                            <span style="font-size: 21px;">DEVELOPMENT</span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                            <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding: 110px 0px 5px 40px;opacity: 0.5">
+                            <span style="font-size: 21px;">PUBLIC SALE</span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: start;padding-left: 80px;margin-top: -10px;opacity: 0.5">
+                            <span style="font-size: 28px;font-family: flink black;"><b>45%</b></span>
+                        </div>
+                        <div class="col-sm-12" style="text-align: start;padding: 85px 0px 0px 10px;">
+                            <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                style="font-size: 28px;font-family: flink black;">
+                                10%</b>
+                        </div>
+                    </div>
+                    <div class="section9texttwo">
+                        <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                            <span style="font-size: 21px;">R & D</span><b
+                                style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                5%</b>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                            <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                    style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                            <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                    style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                        </div>
+                        <div class="col-sm-12"
+                            style="text-align: center;padding: 90px 0px 5px 0px;opacity: 0.5">
+                            <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                    style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                        </div>
+                        <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                            <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                style="font-size: 28px;font-family: flink black;">
+                                10%</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col-sm-12"  style="max-height: 600px;overflow-y:scroll;overflow-x:hidden;">
+            <div class="col-sm-12" style="height:2000px;position: relative;">
+                <div style="height: 100%;width:100%;background-color: red;"></div>
+                <div class="col-sm-12" style="height:600px;background-color:transparent;position: absolute;top:500px;z-index:1001;">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                        </div>
+                        <div class="col-sm-5 backimage2">
+                            <div class="section9text">
+
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 245px 0px 5px 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                                </div>
+
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 90px 0px 5px 0px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="height:600px;background-color:transparent;position: absolute;top:1000px;z-index:1001;">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+
+                        </div>
+                        <div class="col-sm-5 backimage2">
+
+                            <div class="section9text">
+                                <div class="col-sm-12"
+                                    style="text-align: start;align-items: center;padding: 5px 0px 5px 70px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 5px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 55px 0px 5px 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 110px 0px 5px 40px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 85px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 90px 0px 5px 0px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        <!--  <div class="col-sm-12" style="height:600px;background-color:transparent;position: sticky;width:100%;">
+                   <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+
+                        </div>
+                        <div class="col-sm-5 backimage2">
+
+                            <div class="section9text">
+                                <div class="col-sm-12"
+                                    style="text-align: start;align-items: center;padding: 5px 0px 5px 70px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 5px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 55px 0px 5px 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 110px 0px 5px 40px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;opacity: 0.5">
+                                    <span style="font-size: 28px;font-family: flink black;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 85px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 90px 0px 5px 0px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+        <!-- <div class="col-sm-12 div2">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:160px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-brands fa-ethereum" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                                <div class="mx-4" style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-solid fa-dollar-sign" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <img src="./tokenomics/carrot_dark.png" style="height: 80px;" />
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 backimage2">
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:110px;right:60px;font-family: flink regular;">
+                                The profit pool that will pay the tastemakers their incentives
+                            </div>
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:150px;left:230px;background-color: grey;">
+                            </div>
+                            <div class="section9text">
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 20px 0px 5px 70px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 10px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 55px 0px 5px 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;opacity: 0.5">
+                                    <span style="font-size: 28px;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 90px 0px 5px 40px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;">
+                                    <span style="font-size: 28px;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 75px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 20px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 90px 0px 5px 0px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 78px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 div3">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:160px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-brands fa-ethereum" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                                <div class="mx-4" style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-solid fa-dollar-sign" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <img src="./tokenomics/carrot_dark.png" style="height: 80px;" />
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 backimage3">
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:110px;right:60px;font-family: flink regular;">
+                                The profit pool that will pay the tastemakers their incentives
+                            </div>
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:150px;left:230px;background-color: grey;">
+                            </div>
+                            <div class="section9text">
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 70px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 5px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;opacity: 0.5">
+                                    <span style="font-size: 28px;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 55px 0px 5px 30px;">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;">
+                                    <span style="font-size: 28px;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 110px 0px 5px 40px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px">
+                                    <span style="font-size: 28px;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 78px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;opacity: 0.5">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 90px 0px 5px 0px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 div4">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:160px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-brands fa-ethereum" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                                <div class="mx-4" style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-solid fa-dollar-sign" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <img src="./tokenomics/carrot_dark.png" style="height: 80px;" />
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 backimage4">
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:110px;right:60px;font-family: flink regular;">
+                                The profit pool that will pay the tastemakers their incentives
+                            </div>
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:150px;left:230px;background-color: grey;">
+                            </div>
+                            <div class="section9text">
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding: 5px 0px 5px 70px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 5px 0px 5px 5px;">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px;">
+                                    <span style="font-size: 28px;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 55px 0px 5px 30px;">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;">
+                                    <span style="font-size: 28px;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 110px 0px 5px 40px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px;">
+                                    <span style="font-size: 28px;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 80px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;opacity: 0.5;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px;">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px;">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 90px 0px 5px 0px;">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 div5">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:160px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-brands fa-ethereum" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                                <div class="mx-4" style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-solid fa-dollar-sign" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <img src="./tokenomics/carrot_dark.png" style="height: 80px;" />
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                        <span
+                                            style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 backimage5">
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:110px;right:60px;font-family: flink regular;">
+                                The profit pool that will pay the tastemakers their incentives
+                            </div>
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:150px;left:230px;background-color: grey;">
+                            </div>
+                            <div class="section9text">
+                                <div class="col-sm-12" style="text-align: start;padding: 5px 0px 5px 70px;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 5px 0px 5px 5px">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -15px">
+                                    <span style="font-size: 28px;"><b>10%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 45px 0px 5px 30px">
+                                    <span style="font-size: 21px;">DEVELOPMENT</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px">
+                                    <span style="font-size: 28px;"><b>30%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 120px 0px 5px 40px">
+                                    <span style="font-size: 21px;">PUBLIC SALE</span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: start;padding-left: 80px;margin-top: -10px">
+                                    <span style="font-size: 28px;"><b>45%</b></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 85px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo">
+                                <div class="col-sm-12" style="text-align: center;padding-top: 7px;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 5px 0px 5px 0px;line-height: 30px">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 90px 0px 5px 0px">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 100px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b style="font-size: 28px;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- </div>
+        </div>
+    </div> -->
+        <!-- <script>
+        // console.log(window.innerWidth);
+        const sectioncontain = document.querySelector("#section9contain");
+        sectioncontain.addEventListener("scroll", () => {
+            console.log(sectioncontain.scrollTop);
+            let div2positionbig = sectioncontain.scrollTop > 559 ? "absolute" : "sticky"
+            let div2topbig = sectioncontain.scrollTop > 559 ? "600px" : "50px"
+            let div2positionsmall = sectioncontain.scrollTop > 820 ? "absolute" : "sticky";
+            let div2topsmall = sectioncontain.scrollTop > 820 ? "870px" : "50px";
+            let div3positionbig = sectioncontain.scrollTop > 1160 ? "absolute" : "sticky"
+            let div3topbig = sectioncontain.scrollTop > 1160 ? "1200px" : "50px";
+            let div3positionsmall = sectioncontain.scrollTop > 1690 ? "absolute" : "sticky";
+            let div3topsmall = sectioncontain.scrollTop > 1690 ? "1740px" : "50px";
+            let div4positionbig = sectioncontain.scrollTop > 1761 ? "absolute" : "sticky"
+            let div4topbig = sectioncontain.scrollTop > 1761 ? "1800px" : "50px"
+            let div4positionsmall = sectioncontain.scrollTop > 2560 ? "absolute" : "sticky";
+            let div4topsmall = sectioncontain.scrollTop > 2560 ? "2610px" : "50px";
+            let div5positionbig = sectioncontain.scrollTop > 2362 ? "absolute" : "sticky"
+            let div5topbig = sectioncontain.scrollTop > 3430 ? "2400px" : "50px"
+            let div5positionsmall = sectioncontain.scrollTop > 3430 ? "absolute" : "sticky";
+            let div5topsmall = sectioncontain.scrollTop > 3430 ? "3480px" : "50px";
+            document.querySelector(".div2").style.position = window.innerWidth > 567 ? div2positionbig : div2positionsmall;
+            document.querySelector(".div2").style.top = window.innerWidth > 567 ? div2topbig : div2topsmall;
+            document.querySelector(".div3").style.position = window.innerWidth > 567 ? div3positionbig : div3positionsmall;
+            document.querySelector(".div3").style.top = window.innerWidth > 567 ? div3topbig : div3topsmall;
+            document.querySelector(".div4").style.position = window.innerWidth > 567 ? div4positionbig : div4positionsmall;
+            document.querySelector(".div4").style.top = window.innerWidth > 567 ? div4topbig : div4topsmall;
+        })
+
+    </script> -->
+
+
+        <!-- <nav class="navbar navbar-expand-lg"
+        style="background-color: #272525;position: fixed;z-index: 1200;top: 0px;width: 100%;font-family: flink regular;">
+        <div class="container-fluid" style="padding-top: 0px;position: relative;padding-bottom: 0px;">
+            <img class="crossbutton" onclick="nav2()" src="./660252.png"
+                style="position: absolute;z-index:1000;background-color: #fff;height: 30px;top: 0px;right:10px;border-radius: 50%;" />
+            <a class="navbar-brand" href="#">
+                <img class="logoimg" src="./1/logo.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navlist" id="navbarSupportedContent">
+                <ul class="navbar-nav nav1">
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link" aria-current="page" href="#" style="color:#fff;font-weight:700;">HOW TO
+                            BUY</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%;">
+                            </div>
+                            <div style="width:5%;padding-left: 3px;">
+                                <img src="./1/menu_down_arrow.png" style="height: 6px;" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 navli">
+                        <a class="nav-link active" aria-current="page" target="_BLANK"
+                            href="./CARROT_Whitepaper_Final_EH.pdf" style="color:#fff;font-weight:700;">WHITEPAPER</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700;">AUDIT</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%;">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 whitepaper navli">
+                        <a class="nav-link active" aria-current="page" href="#" style="color:#fff;font-weight:700;">WORK
+                            WITH
+                            US</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%;">
+                            </div>
+                            <div style="width:10%;padding-left: 3px;">
+                                <img src="./1/menu_down_arrow.png" style="height: 6px;" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700;">PRESS</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:80%;">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item navlibutton">
+                        <div
+                            style="padding: 8px;background-image: url('./btn_cta.png');background-position: center;background-repeat: no-repeat;background-size: 100%;color:#fff;border: none;font-weight: 600;">
+                            LAUNCH
+                            PRODUCT</div>
+                    </li>
+                    <li class="nav-item navflag">
+                        <img src="./1/share.png" style="height:35px" />
+                        <img class="mx-2" src="./1/flag_uk.png" style="height:35px" />
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="col-sm-12" id="navigationbar1" style="padding: 0px 20px;font-family: flink regular;">
+            <div class="row">
+                <div style="display: flex; justify-content: center;align-items: center;">
+                    <div class="col-sm-7  nav2one ">
+                        <div><img class="logoimg2" src="./1/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-1  nav2one " style="display:flex ; justify-content: center;align-items: center;">
+                        <label onclick="nav1()" style="font-size:1.8rem;color: grey;"><i class="fa-solid fa-bars"></i></label>
+                    </div>
+                </div>
+            </div>
+            <img class="nav2two" src="./1/logo.png" style="height:3.5rem; float: left;" alt="">
+            <label class="nav2two" onclick="nav1()"
+                style="font-size:1.8rem;color: grey;opacity: 0.2;float: right;margin-top:30px"><i
+                    class="fa-solid fa-bars"></i></label>
+
+
+        </div>
+    </div>
+    <img id="moveup" src="./move_up.png" style="height:80px;position: fixed;z-index:1200;bottom:0px;right:0px;" />
+    <div class="col-sm-12" style="height: 100vh;overflow-y: scroll;overflow-x: hidden;background-color: red;" id="containerpart"
+        onscroll="scrollDivs()">
+        <div style="height: 200%;width:100%;">
+            <div id="blankdiv" style="height:10px">
+                &nbsp;
+            </div>
+            <div class="bgimgontext" style="overflow: hidden;">
+                <img src="./1.png" style="width: 100%;height: auto;" />
+                <div class="col-sm-12" style="position: absolute;z-index: 100;top:60px;left:26px;">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could ask
+                                    <br>one million people <br>
+                                    the same question?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could ask
+                                    <br>your exact target <br>
+                                    audience their opinion?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could do
+                                    <br>it in real time <br>
+                                    from anywhere?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    This is made possible
+                                    <br> with blockchain<br>
+                                    technology
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" id="part2"
+                style="display:flex ;justify-content: center;align-items: center;background-color: #37323E;">
+                <div class="col-sm-12 text-center playbtn">
+                    <div style=" background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-image: url('./video_bg.png');
+            background-position: center;
+            background-repeat: no-repeat;">
+                        <div class="playbtn">
+                            <img class="carrot" src="./6/play_btn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <!-- <script>
+        onscroll = () => {
+            // console.log(window.pageYOffset);
+
+            // document.querySelector("#moveup").style.display = containerscroll.scrollTop() > 139 ? "block" : "none"
+
+            // document.querySelector('.crossbutton').style.display = containerscroll.scrollTop() > 139 ? "block" : "none";
+            // // console.log(containerscroll.scrollTop());
+            // if (containerscroll.scrollTop() > 139) {
+            //     // alert('139')
+            //     // section4.scrollIntoView();
+            //     document.querySelector('#navigationbar1').style.top = "0%";
+            //     document.querySelector('.navbar').style.top = "-100%";
+            //     // document.querySelector('.section').style.top = "200px";
+            // }
+            // else if (containerscroll.scrollTop() < 139) {
+            //     document.querySelector('#navigationbar1').style.top = "-100%";
+            //     document.querySelector('.navbar').style.top = "0%";
+            //     // document.querySelector('.section').style.top = "150px";
+            // }
+        }
+        function nav1() {
+            // document.querySelector('#navigationbar1').style.top = "-100%";
+            document.querySelector('.navbar').style.top = "0%";
+            // document.querySelector('.crossbutton').style.display = 'block'
+        }
+        function nav2() {
+            // document.querySelector('#navigationbar1').style.top = "-100%";
+            document.querySelector('.navbar').style.top = "-100%";
+        }
+        var containerscroll = $('#containerpart');
+        function scrollDivs() {
+            document.querySelector("#moveup").style.display = containerscroll.scrollTop() > 139 ? "block" : "none"
+
+            document.querySelector('.crossbutton').style.display = containerscroll.scrollTop() > 139 ? "block" : "none";
+            // console.log(containerscroll.scrollTop());
+            if (containerscroll.scrollTop() > 139) {
+                // alert('139')
+                // section4.scrollIntoView();
+                document.querySelector('#navigationbar1').style.top = "0%";
+                document.querySelector('.navbar').style.top = "-100%";
+                // document.querySelector('.section').style.top = "200px";
+            }
+            else if (containerscroll.scrollTop() < 139) {
+                document.querySelector('#navigationbar1').style.top = "-100%";
+                document.querySelector('.navbar').style.top = "0%";
+                // document.querySelector('.section').style.top = "150px";
+            }
+
+            var lastKnownPos = containerscroll.scrollTop();
+            console.log(containerscroll.scrollTop());
+            let scroll = containerscroll.scrollTop()
+            if (lastKnownPos > containerscroll.scrollTop()) {
+                lastKnownPos = containerscroll.scrollTop();
+            } else {
+
+                console.log(lastKnownPos, containerscroll.scrollTop());
+                if (containerscroll.scrollTop() >= 100 && containerscroll.scrollTop() <= 121) {
+                    containerscroll.animate({
+                        scrollTop: $("#part2").offset().top - containerscroll.offset().top + containerscroll.scrollTop()
+                    });
+                }
+                if (containerscroll.scrollTop() >= 800 && containerscroll.scrollTop() <= 820) {
+                    containerscroll.animate({
+                        scrollTop: $(".presalecontainer").offset().top - containerscroll.offset().top + containerscroll.scrollTop()
+                    });
+                }
+                lastKnownPos = containerscroll.scrollTop();
+            }
+
+        }
+    </script> -->
+
+        <!-- <div class="col-sm-12" style="padding: 80px 20px;">
+        <div class="col-sm-12" id="section9contain" style="margin-top: 0px;max-height: 600px;overflow-y:scroll;overflow-x:hidden;background-color: red;">
+            <div class="col-sm-12 section9parallax" style="background-color: red;margin-top:0px;">
+                <div class="col-sm-12 div1" style="background-color: brown;margin-top:0px">
+                    <div class="row">
+                        <div class="col-sm-7"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:20px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:60px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:160px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 160px;height: 250px;">
+                                            <div
+                                                style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                                <span
+                                                    style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                                    - <nav class="navbar navbar-expand-lg"
+        style="background-color: #272525;position: fixed;z-index: 1200;top: 0px;width: 100%;font-family: flink regular;">
+        <div class="container-fluid" style="padding-top: 0px;position: relative;padding-bottom: 0px;">
+            <img class="crossbutton" onclick="nav2()" src="./660252.png"
+                style="position: absolute;z-index:1000;background-color: #fff;height: 30px;top: 0px;right:10px;border-radius: 50%;" />
+            <a class="navbar-brand" href="#">
+                <img class="logoimg" src="./1/logo.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navlist" id="navbarSupportedContent">
+                <ul class="navbar-nav nav1">
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link" aria-current="page" href="#" style="color:#fff;font-weight:700;">HOW TO
+                            BUY</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%;">
+                            </div>
+                            <div style="width:5%;padding-left: 3px;">
+                                <img src="./1/menu_down_arrow.png" style="height: 6px;" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 navli">
+                        <a class="nav-link active" aria-current="page" target="_BLANK"
+                            href="./CARROT_Whitepaper_Final_EH.pdf" style="color:#fff;font-weight:700;">WHITEPAPER</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700;">AUDIT</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%;">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 whitepaper navli">
+                        <a class="nav-link active" aria-current="page" href="#" style="color:#fff;font-weight:700;">WORK
+                            WITH
+                            US</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%;">
+                            </div>
+                            <div style="width:10%;padding-left: 3px;">
+                                <img src="./1/menu_down_arrow.png" style="height: 6px;" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1 navli">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700;">PRESS</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:80%;">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item navlibutton">
+                        <div
+                            style="padding: 8px;background-image: url('./btn_cta.png');background-position: center;background-repeat: no-repeat;background-size: 100%;color:#fff;border: none;font-weight: 600;">
+                            LAUNCH
+                            PRODUCT</div>
+                    </li>
+                    <li class="nav-item navflag">
+                        <img src="./1/share.png" style="height:35px" />
+                        <img class="mx-2" src="./1/flag_uk.png" style="height:35px" />
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="col-sm-12" id="navigationbar1" style="padding: 0px 20px;font-family: flink regular;">
+            <div class="row">
+                <div style="display: flex; justify-content: center;align-items: center;">
+                    <div class="col-sm-7  nav2one ">
+                        <div><img class="logoimg2" src="./1/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-1  nav2one " style="display:flex ; justify-content: center;align-items: center;">
+                        <label onclick="nav1()" style="font-size:1.8rem;color: grey;"><i class="fa-solid fa-bars"></i></label>
+                    </div>
+                </div>
+            </div>
+            <img class="nav2two" src="./1/logo.png" style="height:3.5rem; float: left;" alt="">
+            <label class="nav2two" onclick="nav1()"
+                style="font-size:1.8rem;color: grey;opacity: 0.2;float: right;margin-top:30px"><i
+                    class="fa-solid fa-bars"></i></label>
+
+
+        </div>
+    </div>
+    <img id="moveup" src="./move_up.png" style="height:80px;position: fixed;z-index:1200;bottom:0px;right:0px;" />
+    <div class="col-sm-12" style="height: 100vh;overflow-y: scroll;overflow-x: hidden;background-color: red;" id="containerpart"
+        onscroll="scrollDivs()">
+        <div style="height: 200%;width:100%;">
+            <div id="blankdiv" style="height:10px">
+                &nbsp;
+            </div>
+            <div class="bgimgontext" style="overflow: hidden;">
+                <img src="./1.png" style="width: 100%;height: auto;" />
+                <div class="col-sm-12" style="position: absolute;z-index: 100;top:60px;left:26px;">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could ask
+                                    <br>one million people <br>
+                                    the same question?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could ask
+                                    <br>your exact target <br>
+                                    audience their opinion?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    What if you could do
+                                    <br>it in real time <br>
+                                    from anywhere?
+                                </div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div
+                                    style=" font-family:DunbarTall-ExtraBold ;color: #fff; font-size: 6vw; font-weight: 900;">
+                                    This is made possible
+                                    <br> with blockchain<br>
+                                    technology
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" id="part2"
+                style="display:flex ;justify-content: center;align-items: center;background-color: #37323E;">
+                <div class="col-sm-12 text-center playbtn">
+                    <div style=" background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-image: url('./video_bg.png');
+            background-position: center;
+            background-repeat: no-repeat;">
+                        <div class="playbtn">
+                            <img class="carrot" src="./6/play_btn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="container" style="width: 100%;overflow-x: scroll;height:100%">
+            <div id="page-wrap">
+                <div class="panel" id="panel-1" style="background-color: #fff">
+                    <div class="col-sm-12" id="bottomleft">
+                        <img class="scrollimg2" src="./logo_txt_below.png" />
+                        <div class="row">
+                            <div class="col-sm-4 scrollleft"></div>
+                            <div class="col-sm-7 scrollright" id="scrollright2">
+                                <div class="col-sm-12 my-3">
+                                    <span class="scrollheading">
+                                        Solution </span>
+                                </div>
+                                <span class="scrolltext">
+                                    Our answer is MASS ACCURACY. By delivering the wisdom of the
+                                    crowd, we will be building the largest group of opinion
+                                    providers ever seen. Utilizing web3 technology to create a
+                                    seamless reward mechanism to encourage anyone to take part,
+                                    we’ll both maximize the potential number of opinion givers
+                                    AND
+                                    empower you to create the exact audience you want the
+                                    opinion
+                                    of.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel-2">
+                    <div class="col-sm-12" id="bottomright">
+                        <div class="row">
+                            <div class="col-sm-1 scrollleft"></div>
+                            <div class="col-sm-11 scrollright">
+                                <div class="col-sm-12 my-3">
+                                    <span class="scrollheadingthird">
+                                       We are focused on three things.</span>
+                                </div>
+                                <div class="col-sm-12 my-2" >
+
+                                    <div id="scrollnum" style="margin-top: 0px" >
+                                        <span style="font-family:flink black;color:#000">1</span>
+                                    </div>
+                                    <div class="scrolltextcontainer" style="display: inline-block;">
+                                    <span id="scrolltext3" style="font-family: flink bold;color: #000;">
+                                       We are focused on three things.</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 my-3" >
+                                    <div class="scrolldiv1" style="height: 80px" ></div>
+                                    <div id="scrollnum" style="margin-top:0px" >
+                                        <span style="font-family:flink black;color:#000">2</span>
+                                    </div>
+
+                                    <div class="scrolltextcontainer" style="display: inline-block;">
+                                    <span id="scrolltext3" style="font-family: flink bold;color:#000;margin-top: 0px;">
+                                       Creating technology which  <span style="font-family: flink black">maximises</span> accuracy of<br/>
+                                       opinion and <span style="font-family: flink black">minimises</span> per opnion cost.
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 my-2" >
+                                    <div class="scrolldiv2" style="height: 80px" ></div>
+                                    <div id="scrollnum" style="margin-top: 0px" >
+                                        <span style="font-family:flink black;color:#000">3</span>
+                                    </div>
+                                    <div class="scrolltextcontainer" style="display: inline-block;">
+                                    <span id="scrolltext3" style="font-family: flink bold;color:#000;">
+                                       We are focused on three things.</span>
+                                       </div>
+                               </div>
+                                <div class="col-sm-12 mt-4 scrolldiv3container" style="width:100%;overflow-x: scroll;display:flex;justify-content:start;align-items:center;;">
+                                    <div class="scrolldiv3"></div>
+
+                                    <span id="scrolltext4" style="font-family: flink regular;line-height: 38px;font-weight: 900;color:#000;">
+                                        Our answer is mass acuracy. By delivering the wisdom of the
+                                        crowd, we will be building the largest group of opinion
+                                        providers ever seen. Utilizing web3 technology to create a
+                                        seamless reward mechanism to encourage anyone to take part,
+                                        we’ll both maximize the potential number of opinion givers
+                                        AND
+                                        empower you to create the exact audience you want the
+                                        opinion
+                                        of.</span>
+                                   </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+    <script>
+
+        function checkScrollDirectionIsUp(event) {
+            if (event.wheelDelta) {
+                return event.wheelDelta > 0;
+            }
+            return event.deltaY < 0;
+        }
+
+
+            let container = document.querySelector('#container');
+            var containerscrollinner = $('#containerdivscrollinner');
+            let a = 0;
+            let b=0;
+            function scrollHorizontally(e) {
+                // console.log(containerscrollinner.scrollTop());
+                if (checkScrollDirectionIsUp(event)) {
+                    console.log('UP');
+                    if (a >= 0) { //jaise hi
+                        a = 0;
+                    }
+                } else {
+                    console.log('Down');
+                    a = a + 1;
+                }
+                let elRect = document.getElementById('panel-1').getBoundingClientRect();
+                // alert(elRect.right == 0 ? 'ok' : 'not oks')
+                console.log(elRect.right, a);
+                e = container.event || e;
+                var delta = -1600 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+                // var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                // document.querySelector("#container").scrollLeft -= (delta * 1600); // Multiplied by 40
+                // document.documentElement.scrollLeft -= (delta * 40); // Multiplied by 40
+                var pst = $('#container').scrollLeft() + delta;
+                $('#container').animate({
+                    scrollLeft: $('#container').scrollLeft() + delta
+                }, 100);
+                if (elRect.right >= 0 && a < 10) {
+                    document.querySelector('.scrolldiv1').style.width="0px";
+                    document.querySelector('.scrolldiv2').style.width="0px";
+                    document.querySelector('.scrolldiv3').style.width="0px"
+                e.preventDefault();
+                }
+
+            }
+            if (container.addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                container.addEventListener("mousewheel", scrollHorizontally);
+                // Firefox
+                // container.addEventListener("DOMMouseScroll", scrollHorizontally);
+            } else {
+                // IE 6/7/8
+                container.attachEvent("onmousewheel", scrollHorizontally);
+            }
+
+
+    </script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

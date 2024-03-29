@@ -1,0 +1,2837 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./countdown 2/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="./Carrot/css/animate.min.css" />
+
+
+    <link rel="stylesheet" href="./Carrot/css/parallax.css" />
+    <link rel="stylesheet" href="./Carrot/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="./Carrot/vendor/animate/animate.css">
+    <title>Carrot App</title>
+    <style>
+        .playbtn {
+            width: 100%;
+            /* padding: 14rem; */
+            margin: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #37323E;
+            /* filter: drop-shadow(0rem .4rem 0.25rem #37323E); */
+        }
+
+        .bgimg {
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-image: url('./video_bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carrot {
+            width: 400px;
+        }
+
+        @media (max-width:720px) {
+            /* .carrot {
+                width: 40%;
+            } */
+
+            /* .playbtn {
+                width: 100%;
+                height: 100%;
+            } */
+
+            .bgimg {
+                background-size: 65rem;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width:439px) {
+            .carrot {
+                width: 80%;
+            }
+
+            .playbtn {
+                height: 400px
+            }
+
+            .bgimg {
+                background-size: 30rem;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+
+
+
+
+
+
+        /* #navigationbar1 {
+            position: fixed;
+            width: 100%;
+            z-index: 1199;
+        } */
+
+        nav label i {
+            font-size: 40px;
+            /* color: rgb(128, 125, 125); */
+            color: #fff;
+            opacity: 0.2;
+        }
+
+        /* .section {
+            height: 2000px;
+            border: 5px solid black;
+            background-color: #F07E13;
+            position: relative;
+            top: 150px;
+            transition: all 0s;
+        } */
+
+        .presaletext {
+            font-size: 55px;
+            font-family: flink regular;
+        }
+
+        .presaledate {
+            font-size: 70px;
+            font-weight: 700;
+            font-family: flink bold;
+        }
+
+
+
+        @media (max-width:620px) {
+            .presaletext {
+                font-size: 35px
+            }
+
+            .presaledate {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+        }
+
+        /* start cta1 css */
+
+
+        #overflox {
+
+            overflow-y: hidden;
+            width: 100%;
+            height: 100%;
+            overflow-x: scroll;
+            cursor: pointer;
+        }
+
+        #overflox::-webkit-scrollbar {
+            display: none;
+        }
+
+        #section9contain::-webkit-scrollbar {
+            display: none;
+        }
+
+        .ctaover {
+            width: 200%;
+        }
+
+
+
+
+
+
+
+        /* #document {
+            display: none;
+        } */
+
+        #loading {
+            height: 100vh;
+            width: 100%;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: fixed;
+            z-index: 1300;
+            background-color: #fff;
+            transition-delay: 1s;
+            transition-property: height;
+            padding-top: 200px;
+        }
+
+
+        .linkhover:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* end css cta2 */
+    </style>
+</head>
+
+<body>
+
+    <div id="loading" style="top: 0px;position: fixed;z-index: 1201;">
+        <div class="col-sm-12" style="display: flex;justify-content:center;align-items:center;">
+            <img id="loadingimg" src="./logo_txt_below.png" style="height:200px" />
+        </div>
+        <div class="col-sm-12 mt-5" style="display: flex;justify-content:center;align-items:center;">
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
+        <div class="col-sm-12 mt-2"
+            style="display: flex;justify-content:center;align-items:center;font-size: 30px;color:black;">
+            Loading...
+        </div>
+    </div>
+    <script>
+        $(window).on('load', function () { // makes sure the whole site is loaded
+            // $('#status').fadeOut(); // will first fade out the loading animation
+            $('#loading').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(500).css({ 'overflow': 'visible' });
+        })
+    </script>
+    <!-- <div style="height:100%;overflow:auto;width:100%" onscroll="scrollParagraph1()" id="containerdiv"> -->
+
+    <nav class="navbar navbar-expand-lg" id="navbig"
+        style="background-color:#272525;position:fixed;z-index:1200;top:0;width:100%;font-family:flink regular">
+        <div class="container-fluid" style="padding-top:0;position:relative;padding-bottom:0"><img class="crossbutton"
+                onclick="nav2()" src="./660252.png"
+                style="position:absolute;z-index:1000;background-color:#fff;height:30px;top:0;right:10px;border-radius:50%;cursor: pointer;" />
+            <a class="navbar-brand" href="#"><img class="logoimg" src="./1/logo.png" /> </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;color:white;"></i></button>
+            <div class="collapse navbar-collapse navlist" id="navbarSupportedContent">
+                <ul class="navbar-nav nav1">
+                    <li class="nav-item mx-1 navli"><a class="nav-link" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700">HOW TO BUY</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%"></div>
+                            <div style="width:5%;padding-left:3px"><img src="./1/menu_down_arrow.png"
+                                    style="height:6px" /></div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item mx-2 navli"><a class="nav-link active" aria-current="page" target="_BLANK"
+                            href="./CARROT_Whitepaper_Final_EH.pdf" style="color:#fff;font-weight:700">WHITEPAPER</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1 navli"><a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700">AUDIT</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:90%"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 whitepaper navli"><a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700">WORK WITH US</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:75%"></div>
+                            <div style="width:10%;padding-left:3px"><img src="./1/menu_down_arrow.png"
+                                    style="height:6px" /></div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item mx-1 navli"><a class="nav-link active" aria-current="page" href="#"
+                            style="color:#fff;font-weight:700">PRESS</a>
+                        <div class="navlibottom">
+                            <div class="navdiv" style="width:80%"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item navlibutton">
+                        <div
+                            style="padding:8px;background-image:url('./btn_cta.png');background-position:center;background-repeat:no-repeat;background-size:100%;color:#fff;border:none;font-weight:600">
+                            LAUNCH PRODUCT</div>
+                    </li>
+                    <li class="nav-item navflag"><img src="./1/share.png" style="height:35px" /> <img class="mx-2"
+                            src="./1/flag_uk.png" style="height:35px" /></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="col-sm-12" id="navigationbar1" style="padding:0 20px;font-family:flink regular">
+        <div class="row">
+            <div style="display:flex;justify-content:center;align-items:center">
+                <div class="col-sm-7 nav2one">
+                    <div>
+                        <img class="logoimg2" id="logo1" src="./1/logo.png" alt="" />
+                        <img class="logoimg2" id="logo2" src="./logo_txt_below.png" alt="" />
+                        <img class="logoimg2" id="logo3" src="./logo_white.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-1 nav2one" id="ham1" style="display:flex;justify-content:center;align-items:center">
+                    <label class="nav2one" onclick="nav1()" style="cursor: pointer;font-size:1.8rem;color:grey"><i
+                            class="fa-solid fa-bars"></i></label></div>
+            </div>
+        </div>
+        <div class="col-sm-7 nav2two">
+            <img id="logo4" src="./1/logo.png" style="height:3.5rem;float:left" alt="" />
+            <img id="logo5" src="./logo_txt_below.png" style="height:3.5rem;float:left" alt="" />
+            <img id="logo6" src="./logo_white.png" style="height:3.5rem;float:left" alt="" />
+        </div>
+        <div class="nav2two"> <label onclick="nav1()" id="ham2"
+                style="cursor: pointer;font-size:1.8rem;color:grey;opacity:.2;float:right;margin-top:10px"><i
+                    class="fa-solid fa-bars"></i></label></div>
+
+
+    </div>
+
+    <img id="moveup" src="./move_up.png"
+        style="height:80px;position:fixed;z-index:1200;bottom:0;right:0;cursor:pointer;" />
+    <div class="col-sm-12" style="height:100vh;overflow-y:scroll;overflow-x:hidden;scroll-snap-type:y mandatory"
+        id="containerpart" onscroll="scrollDivs()">
+        <div style="height:200%;width:100%">
+            <div id="blankdiv" class="commonclass">&nbsp;</div>
+            <div class="bgimgontext" style="overflow:hidden">
+                <div class="imhmainbox">
+                    <img class="img1" src="./banner_1/1_0.png" alt="netslow" id="img0">
+                    <img class="img2" src="./banner_1/1_1.png" alt="netslow" id="img1">
+                    <img class="img3" src="./banner_1/1_2.png" alt="netslow" id="img2">
+                    <img class="img4" src="./banner_1/1_3.png" alt="netslow" id="img3">
+                    <img class="img5" src="./banner_1/1_4.png" alt="netslow" id="img4">
+                    <img class="img6" src="./banner_1/1_11.png" alt="netslow" id="img11">
+                    <img class="img7" src="./banner_1/1_12.png" alt="netslow" id="img12">
+                    <img class="img8" src="./banner_1/1_5.png" alt="netslow" id="img5">
+                    <img class="img9" src="./banner_1/1_13.png" alt="netslow" id="img13">
+                    <img class="img10" src="./banner_1/1_6.png" alt="netslow" id="img6">
+                    <img class="img11" src="./banner_1/1_8.png" alt="netslow" id="img8">
+                    <img class="img12" src="./banner_1/1_10.png" alt="netslow" id="img10">
+                    <img class="img13" src="./banner_1/1_9.png" alt="netslow" id="img9">
+                    <img class="img14" src="./banner_1/1_7.png" alt="netslow" id="img7">
+                </div>
+                <script>
+                    function random_item(items) {
+                        return items[Math.floor(Math.random() * items.length)];
+                    }
+                    setInterval(() => {
+                        const img_array = ["img0", "img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12", "img13"];
+                        var z = random_item(img_array)
+                        let index = img_array.indexOf(z);
+                        console.log(z);
+                        console.log(index);
+                        const img = document.getElementById(z);
+                        console.log()
+                        let pp = document.getElementById(z).src;
+                        console.log(pp);
+                        let tt = pp.split("/");
+                        let kk = tt[3];
+                        let oo = kk.charAt(kk.length - 1);
+                        let banner;
+                        // kk.charAt(kk.length - 1);
+                        // pp.splice();
+                        //tt = Math.random(1, 2);
+                        //function randomIntFromInterval(min, max) { // min and max included
+                        //tt = Math.floor(Math.random() * (2 - 1 + 1) + 1).toFixed(0)
+                        //}
+                        //const rndInt = randomIntFromInterval(1, 6)
+                        console.log("random=" + pp);
+                        // console.log("ra=" + tt[3]);
+                        console.log("ra=" + oo);
+                        if (oo == 1 ) {
+                            banner = 2
+                        }
+                        else {
+                            banner = 1
+                        }
+                        // console.log(banner);
+                        console.log(img.src);
+                        img.src = './banner_' + banner + '/' + banner + '_' + index + '.png';
+                        $(document).ready(function () {
+                            // $('#' + z + '').src = './banner_' + banner + '/' + banner + '_' + index + '.png';if
+                            $('#' + z + '').fadeTo("slow", 0.2)
+                            $('#' + z + '').fadeTo("slow", 1);
+                        });
+                    }, 3000)
+                </script>
+                <div class="col-sm-12" id="textcarousel">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active slideintext">
+                                <div style="font-family:DunbarTall-ExtraBold;color:#fff;font-size:6vw;font-weight:900">
+                                    What if you could ask<br>one million people<br>the same question?</div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div style="font-family:DunbarTall-ExtraBold;color:#fff;font-size:6vw;font-weight:900">
+                                    What if you could ask<br>your exact target<br>audience their opinion?</div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div style="font-family:DunbarTall-ExtraBold;color:#fff;font-size:6vw;font-weight:900">
+                                    What if you could do<br>it in real time<br>from anywhere?</div>
+                            </div>
+                            <div class="carousel-item slideintext">
+                                <div style="font-family:DunbarTall-ExtraBold;color:#fff;font-size:6vw;font-weight:900">
+                                    This is made possible<br>with blockchain<br>technology</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commonclass parasmall" id="parasmall1">
+                <div class="col-sm-12 commonclasshoriscroll" id="section1" style="height:50%;background-color: #fff;">
+                    <img class="scrollimg" src="./keep_pulling_1.png">
+                    <div class="row">
+                        <div class="col-sm-7 scrollright" id="scrollright2">
+                            <div class="col-sm-12 my-3"><span class="scrollheading">Setting the Scene</span>
+                            </div>
+                            <span class="scrolltext">Knowing if a product is viable before launching is
+                                key to a company's success. Market research has historically been undertaken
+                                through small select groups of individuals to try and understand this. But how
+                                many opinions is enough to be an accurate representation of a market? And how do
+                                you know they are the correct ones?</span>
+                        </div>
+                        <div class="col-sm-7 scrollright" id="scrollright2" style="margin-top: -15px;">
+                            <div class="col-sm-12"><span class="scrollheading">Solution</span>
+                            </div>
+                            <span class="scrolltext">Knowing if a product is viable before launching is
+                                key to a company's success. Market research has historically been undertaken
+                                through small select groups of individuals to try and understand this. But how
+                                many opinions is enough to be an accurate representation of a market? And how do
+                                you know they are the correct ones?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commonclass parasmall" id="parasmall2">
+                <div class="col-sm-12 commonclasshoriscroll" id="section1" style="height:50%;background-color: #fff;">
+                    <div class="col-sm-12 my-3"><span class="scrollheadingthird">We are
+                            focused on three things.</span></div>
+                    <div class="col-sm-12 my-2">
+                        <div id="scrollnum" style="margin-top:0"><span
+                                style="font-family:flink black;color:#000">1</span>
+                        </div>
+                        <div class="scrolltextcontainer" style="display:inline-block">
+                            <span id="scrolltext3" style="font-family:flink bold;color:#000">We are focused
+                                on three things.</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 my-3">
+
+                        <div id="scrollnum" style="margin-top:0"><span
+                                style="font-family:flink black;color:#000">2</span>
+                        </div>
+                        <div class="scrolltextcontainer" style="display:inline-block">
+                            <span id="scrolltext3" style="font-family:flink bold;color:#000;margin-top:0">Creating
+                                technology which <span style="font-family:flink black">maximises</span>
+                                accuracy of<br />opinion and <span style="font-family:flink black">minimises</span>
+                                per
+                                opnion cost.</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 my-2">
+
+                        <div id="scrollnum" style="margin-top:0"><span
+                                style="font-family:flink black;color:#000">3</span>
+                        </div>
+                        <div class="scrolltextcontainer" style="display:inline-block">
+                            <span id="scrolltext3" style="font-family:flink bold;color:#000">We are focused
+                                on three things.</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mt-3 scrolldiv3container"
+                        style="width:100%;overflow-x:scroll;display:flex;justify-content:start;align-items:center">
+                        <span id="scrolltext4" style="font-family:flink regular;font-weight:900;color:#000">Our
+                            answer is mass acuracy. By delivering the wisdom of the
+                            crowd, we will be building the largest group of opinion
+                            providers ever seen. Utilizing web3 technology to create a
+                            seamless reward mechanism to encourage anyone to take part,
+                            we’ll both maximize the potential number of opinion givers
+                            AND empower you to create the exact audience you want the
+                            opinion of.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="commonclass parabig" style="background-color: #fff;">
+                <div class="col-sm-12 parts" id="containerdivscroll">
+                    <div class="col-sm-12" style="height:200%;background-color: red;">
+                        <div class="col-sm-12 commonclasshoriscroll" id="section1" style="background-color: #fff;">
+                            <img class="scrollimg" src="./keep_pulling_1.png">
+                            <div class="row">
+                                <div class="col-sm-4 scrollleft"></div>
+                                <div class="col-sm-7 scrollright" id="scrollright2">
+                                    <div class="col-sm-12 my-3"><span class="scrollheading">Setting the Scene</span>
+                                    </div>
+                                    <span class="scrolltext">Knowing if a product is viable before launching is
+                                        key to a company's success. Market research has historically been undertaken
+                                        through small select groups of individuals to try and understand this. But
+                                        how
+                                        many opinions is enough to be an accurate representation of a market? And
+                                        how do
+                                        you know they are the correct ones?</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 parts commonclasshoriscroll" id="section2" style="width:100%;height:50%">
+                            <div id="container" class="scrolldivhorizontall" style="width:100%;height:100%;">
+                                <div id="page-wrap">
+                                    <div class="panel" id="panel-1" style="background-color:#fff;">
+                                        <div class="col-sm-12" id="bottomleft"><img class="scrollimg2"
+                                                src="./logo_txt_below.png" />
+                                            <div class="row">
+                                                <div class="col-sm-4 scrollleft"></div>
+                                                <div class="col-sm-7 scrollright" id="scrollright2">
+                                                    <div class="col-sm-12 my-3"><span
+                                                            class="scrollheading">Solution</span></div><span
+                                                        class="scrolltext">Our answer is MASS ACCURACY. By
+                                                        delivering
+                                                        the wisdom of the crowd, we will be building the largest
+                                                        group
+                                                        of opinion providers ever seen. Utilizing web3 technology to
+                                                        create a seamless reward mechanism to encourage anyone to
+                                                        take
+                                                        part, we’ll both maximize the potential number of opinion
+                                                        givers
+                                                        AND empower you to create the exact audience you want the
+                                                        opinion of.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel" id="panel-2" style="background-color: #fff;">
+                                        <div class="col-sm-12" id="bottomright">
+                                            <div class="row">
+                                                <div class="col-sm-1 scrollleft"></div>
+                                                <div class="col-sm-11 scrollright">
+                                                    <div class="col-sm-12 my-3"><span class="scrollheadingthird">We
+                                                            are
+                                                            focused on three things.</span></div>
+                                                    <div class="col-sm-12 my-2">
+                                                        <div id="scrollnum" style="margin-top:0"><span
+                                                                style="font-family:flink black;color:#000">1</span>
+                                                        </div>
+                                                        <div class="scrolltextcontainer" style="display:inline-block">
+                                                            <span id="scrolltext3"
+                                                                style="font-family:flink bold;color:#000">We are
+                                                                focused
+                                                                on three things.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 my-3">
+                                                        <div class="scrolldiv1" style="height:80px"></div>
+                                                        <div id="scrollnum" style="margin-top:0"><span
+                                                                style="font-family:flink black;color:#000">2</span>
+                                                        </div>
+                                                        <div class="scrolltextcontainer" style="display:inline-block">
+                                                            <span id="scrolltext3"
+                                                                style="font-family:flink bold;color:#000;margin-top:0">Creating
+                                                                technology which <span
+                                                                    style="font-family:flink black">maximises</span>
+                                                                accuracy of<br />opinion and <span
+                                                                    style="font-family:flink black">minimises</span>
+                                                                per
+                                                                opnion cost.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 my-2">
+                                                        <div class="scrolldiv2" style="height:80px"></div>
+                                                        <div id="scrollnum" style="margin-top:0"><span
+                                                                style="font-family:flink black;color:#000">3</span>
+                                                        </div>
+                                                        <div class="scrolltextcontainer" style="display:inline-block">
+                                                            <span id="scrolltext3"
+                                                                style="font-family:flink bold;color:#000">We are
+                                                                focused
+                                                                on three things.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 mt-3 scrolldiv3container"
+                                                        style="width:100%;overflow-x:scroll;display:flex;justify-content:start;align-items:center">
+                                                        <div class="scrolldiv3"></div><span id="scrolltext4"
+                                                            style="font-family:flink regular;font-weight:900;color:#000">Our
+                                                            answer is mass acuracy. By delivering the wisdom of the
+                                                            crowd, we will be building the largest group of opinion
+                                                            providers ever seen. Utilizing web3 technology to create
+                                                            a
+                                                            seamless reward mechanism to encourage anyone to take
+                                                            part,
+                                                            we’ll both maximize the potential number of opinion
+                                                            givers
+                                                            AND empower you to create the exact audience you want
+                                                            the
+                                                            opinion of.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function checkScrollDirectionIsUp(e) {
+                    return e.wheelDelta ? e.wheelDelta > 0 : e.deltaY < 0
+                }
+                let container = document.querySelector("#container"),
+                    a = 0,
+                    b = 0;
+                function scrollHorizontally(e) {
+                    // e.preventDefault();
+                    let t = document.querySelector("#panel-2").getBoundingClientRect();
+                    let l = document.querySelector("#panel-1").getBoundingClientRect();
+                    console.log(l.left);
+
+                    e = container.event || e;
+                    var n = -1600 * Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+                    if (checkScrollDirectionIsUp(event)) {
+                        (a >= 0 && (a = 0))
+                        if (l.right <= 1000 && window.innerWidth > 1070) {
+                            console.log('stopeed');
+                            e.preventDefault();
+                        }
+                    }
+                    else {
+                        if (t.left >= 100) {
+                            // console.log('stopeed');
+                            e.preventDefault();
+                        }
+                        a += 1;
+                        if (t.right >= 0 && a < 10) {
+                            document.querySelector(".scrolldiv1").style.width = "0px";
+                            document.querySelector(".scrolldiv2").style.width = "0px";
+                            document.querySelector(".scrolldiv3").style.width = "0px"
+                        }
+                    };
+                    $("#container").scrollLeft();
+                    $("#container").animate({
+                        scrollLeft: $("#container").scrollLeft() + n
+                    }, 100)
+                }
+                container.addEventListener ? container.addEventListener("mousewheel", scrollHorizontally) : container.attachEvent("onmousewheel", scrollHorizontally)</script>
+            <div class="col-sm-12 presalecontainer commonclass"
+                style="height: 50%;display:flex;justify-content: center;align-items: center;">
+                <div id="contentcount">
+                    <h1 class="FlinkLight">Presale starts</h1>
+                    <h2 class="FlinkBlack">02<sup>nd</sup> SEPTEMBER 2022</h2>
+                    <div id="bar">
+                        <div id="labels"><span>PRESALE<br><span class="vLine">|</span></span> <span>SOFTCAP<br><span
+                                    class="vLine">|</span></span> <span>BONUS<br><span class="vLine">|</span></span>
+                        </div>
+                        <div id="progressbar" data-percent="75">
+                            <div id="line"></div>
+                        </div>
+                        <div id="targetRaised" class="ceraPro"></div>
+                    </div><canvas data-enddate="September 15, 2022 00:00:00" id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div id="section6" class="container-fluid m-0 section-1 text-center commonclass" style="padding-top:20px">
+                <h1 class="container pt-4 feature" style="font-weight:800;font-family:flink black"><b>Key</b> <span
+                        class="text-white">Features</span></h1>
+                <div class="carousel"
+                    data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true,"prevNextButtons": false, "pageDots": false }'>
+                    <div class="carousel-cell">
+                        <div class="card1 text-center" style="height:300px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-person-to-portal fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0">
+                                <span class="card-title my-4 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Client<br />
+                                        portal</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">As a
+                                    client this will enable you to track any research projects you have in
+                                    action,request realtime research from our taste algorithm and track any brand in
+                                    the
+                                    community.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card1 text-center" style="height:500px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-briefcase fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title mt-5 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Tastemaker<br />
+                                        portal</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">As a
+                                    tastemaker you will be able to keep track of your rewards,request for
+                                    opinions,see
+                                    brand offer and how accurate you opinion has been</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card1 text-center" style="height:500px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-radar fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title my-2 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Research<br />
+                                        Builder</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">Our
+                                    research builder enables you to creat a market research project through a few
+                                    simple
+                                    steps. Simply define your target audience silos, product type,type of audience
+                                    and
+                                    the specific question you wish to ask and we'll action it within 72 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card1 text-center" style="height:520px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i
+                                        class="fa-solid fa-square-root-variable fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title my-2 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Taste<br />
+                                        Algorithm</b></span>
+                                <p class="card-text mt-3 featuretext"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">A
+                                    continually evolving codebase, our taste algorithm is a machine learning tool
+                                    which
+                                    is trained by ( eventually ) millions of opinions. It enables us to deliver an
+                                    instant snapshot opinion on products and services, with manual research groups
+                                    available as a follow on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="card1 text-center" style="height:520px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-sharp fa-solid fa-passport fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title my-2 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Taste<br />
+                                        Passport</b></span>
+                                <p class="card-text mt-3 featuretext"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">By
+                                    curating anonymised, permissioned opinion we provide marketers with a new data
+                                    source - qualified, verified opinion. Unlike the last wave of internet giants,
+                                    who
+                                    shared none of their revenue with their users, we’ll pass the majority of income
+                                    to
+                                    you via your taste passport.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow1">
+                <div class="overflowx"></div>
+            </div>
+            <div class="ctabydy" onmouseover="onScroll()">
+                <div class="ctamainsection" id="ctasection1" onmouseover="bubble()" data-bg="white"
+                    style="scroll-snap-align: center;overflow-x: scroll;">
+                    <div class="tabs animated scrollbubble" data-animation="zoomIn" data-animation-delay="200">
+                        <div class="white-cta">
+                            <img src="./Carrot/images/cta-icon-secure.png" width="200" height="200" alt="" />
+                            <h2>100% Secure
+                            </h2>
+                            <p>Contract code fully audited by <strong>Solid Proof</strong> and shown to be 100%
+                                secure
+                            </p>
+
+                            <div class="facta"><i class="fa-solid fa-circle-down fa-beat"></i></div>
+                            <div class="linkcta"> <a href="#">download audit</a></div>
+                        </div>
+                    </div>
+                    <div class="tabs-right animated scrollbubble" data-animation="bounceIn" data-animation-delay="200">
+                        <div class="white-cta">
+                            <img src="./Carrot/images/cta-icon-verified.png" width="200" height="200" alt="" />
+                            <h2>100% VERIFIED
+                            </h2>
+                            <p>Team fully verified by <strong>Coinsniper</strong> to ensure anti-rug and complete
+                                project
+                                security
+                            </p>
+
+                            <div class="facta"><i class="fa-solid fa-circle-down fa-beat"></i></div>
+                            <div class="linkcta"> <a href="#">download whitepaper</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctamainsection" id="ctasection2" onmouseover="bubble2()" data-bg="#d9783a"
+                    style="scroll-snap-align: center;overflow-x: scroll;">
+
+                    <div class="tabs animated animated2" data-animation="zoomIn" data-animation-delay="600">
+                        <div class="orange-cta">
+                            <h2>Join our presale
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliqua.
+                            </p>
+                            <div class="facta-orange"><i class="fa-sharp fa-solid fa-circle-right fa-beat"></i> <a
+                                    href="#">start
+                                    now</a></div>
+                        </div>
+                    </div>
+                    <div class="tabs-right animated animated2" data-animation="bounceIn" data-animation-delay="800">
+                        <div class="orange-cta">
+                            <h2>get in early with carrot presale
+                            </h2>
+
+                            <div class="facta-orange">
+                                <i class="fa-brands fa-ethereum fa-bounce"></i> <a href="#">Buy with ETH</a>
+                            </div>
+                            <div class="facta-orange">
+                                <i class="fa-brands fa-cc-visa fa-flip" style="--fa-animation-duration: 3s;"></i> <a
+                                    href="#">Buy
+                                    ETH with card</a>
+                            </div>
+                            <div class="facta-orange">
+                                <i class="fa-solid fa-circle-dollar-to-slot fa-shake"></i> <a href="#">Buy with
+                                    USDT</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel smallcarousel commonclass" style="height:50%"
+                data-flickity='{ "wrapAround": true, "autoPlay": 2000, "imagesLoaded":true,"prevNextButtons": false, "pageDots": false }'>
+                <div class="carousel-cell4">
+                    <div class="cta1 m-0 p-0">
+                        <div class="row" style="margin:auto;height:100%">
+                            <div class="col-sm-12 d-flex justify-content-lg-center justify-content-center align-items-center cardstyle1"
+                                style="padding:20px 0">
+                                <div class="card border-0 text-center">
+                                    <div
+                                        class="card-body rounded-circle m-0 p-0 d-flex flex-column align-items-center justify-content-center">
+                                        <img class="card-img-top" src="./CTA/secure.png" alt="Card image cap">
+                                        <p class="card-title py-lg-3" style="font-family:flink bold;font-size:1.9rem">
+                                            100% SECURE</p>
+                                        <p class="card-text px-lg-4" style="font-family:flink regular">Contract code
+                                            full audited by <strong style="font-family:flink bold">solid proof
+                                            </strong>and shown to be 100% secure.</p><i
+                                            class="fa-solid fa-circle-down fa-beat"
+                                            style="font-size:25px;color: #d9783a;"></i>
+                                        <p class="mt-1"><a href="#"
+                                                style="border-bottom:2px solid #5f5f5f;font-weight:10;font-family:flink bold;text-decoration:none;color:#494646">DOWNLOAD
+                                                AUDIT</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell4">
+                    <div class="cta1 m-0 p-0">
+                        <div class="row" style="margin:auto;height:100%">
+                            <div class="col-sm-12 d-flex justify-content-lg-center justify-content-center align-items-center cardstyle2"
+                                style="padding:20px 0">
+                                <div class="card border-0 text-center">
+                                    <div
+                                        class="card-body rounded-circle d-flex flex-column align-items-center justify-content-center">
+                                        <img class="card-img-top" src="./CTA/verified.png" alt="Card image cap">
+                                        <p class="card-title py-lg-3" style="font-family:flink bold;font-size:1.9rem">
+                                            100% VERIFIED</p>
+                                        <p class="card-text px-lg-4" style="font-family:flink regular">Team fully
+                                            verified by <strong style="font-family:flink bold">coinsnoper</strong>
+                                            to
+                                            ensure anti-rug and complete project security.</p><i
+                                            class="fa-solid fa-circle-down fa-beat"
+                                            style="font-size:25px;color:#d9783a"></i>
+                                        <p class="mt-1"><a href="#"
+                                                style="border-bottom:2px solid #5f5f5f;font-family:flink bold;text-decoration:none;color:#494646;font-weight:10">DOWNLOAD
+                                                WHITEPAPER</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell4">
+                    <div class="cta2 m-0 p-0">
+                        <div class="row" style="margin:auto;height:100%">
+                            <div class="col-sm-12 d-flex justify-content-center align-items-center justify-content-lg-center style1cta2"
+                                style="padding:20px 0">
+                                <div class="card border-0 text-center">
+                                    <div
+                                        class="card-body rounded-circle d-flex flex-column align-items-center justify-content-center">
+                                        <p class="card-title py-lg-3" style="font-family:flink bold;font-size:1.9rem">
+                                            JOIN OUR PRESALE</p>
+                                        <p class="card-text px-lg-4" style="font-family:flink regular">Lorem ipsum
+                                            dolor
+                                            sit amet consectetur adipisicing elit. Magnam reprehenderit saepe sint
+                                            vel
+                                            dignissimos minus cum corrupti neque?</p>
+                                        <div><i class="fa-solid fa-circle-right fa-beat"
+                                                style="font-size:25px;color:#d9783a"></i> <a href="#"
+                                                style="border-bottom:2px solid #5f5f5f;font-family:flink bold;text-decoration:none;color:#494646;font-weight:10;font-size:1.2rem">START
+                                                NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell4">
+                    <div class="cta2 m-0 p-0">
+                        <div class="row" style="margin:auto;height:100%">
+                            <div class="col-sm-12 d-flex justify-content-lg-center justify-content-center align-items-center style2cta2"
+                                style="padding:20px 0">
+                                <div class="card border-0 text-center">
+                                    <div
+                                        class="card-body rounded-circle d-flex flex-column align-items-center justify-content-center">
+                                        <p class="card-title py-lg-3 px-lg-4"
+                                            style="font-family:flink bold;font-size:1.9rem">GET IN EARLY
+                                            WITH<br><strong style="font-family:DunbarTall-ExtraBold">CARROT</strong>
+                                            PRESALE</p>
+                                        <div><i class="fa-brands fa-ethereum fa-bounce"
+                                                style="font-size:30px;color:#d9783a"></i> <a href="#"
+                                                style="text-decoration:none;color:#000;font-weight:700;font-family:flink bold;font-size:1rem">BUY
+                                                WITH <strong style="font-family:DunbarTall-ExtraBold">ETH</strong></a>
+                                        </div>
+                                        <div><i class="fa-solid fa-credit-card-front fa-flip"
+                                                style="--fa-animation-duraction:4s;font-size:25px;color:#d9783a"></i>
+                                            <a href="#"
+                                                style="text-decoration:none;color:#000;font-weight:700;font-size:1rem;font-family:flink bold">BUY
+                                                ETH WITH <strong
+                                                    style="font-family:DunbarTall-ExtraBold">CARD</strong></a>
+                                        </div>
+                                        <div><i class="fa-solid fa-dollar-sign fa-shake"
+                                                style="font-size:25px;color:#d9783a"></i> <a href="#"
+                                                style="text-decoration:none;color:#000;font-weight:700;font-size:1rem;font-family:flink bold">BUY
+                                                WITH <strong style="font-family:DunbarTall-ExtraBold">USDT</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 parts commonclass" id="play" style="width:100%;height:50%"
+                style="display:flex;justify-content:center;align-items:center">
+                <div class="col-sm-12 text-center playbtn" style="height: 100%;">
+                    <div
+                        style="background-size:cover;height:100%;width:100%;background-image:url('./video_bg.png');background-position:center;background-repeat:no-repeat">
+                        <div class="playbtn" style="height: 100%;"><img class="carrot" src="./6/play_btn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testmakeroverflow1" style="position:relative">
+                <div class="testmakeroverflowx" style="position:absolute;z-index:100">
+                    <div class="card-body">
+                        <p class="card-text mt-3 mx-1 mt-3"
+                            style="font-size:1.3rem;color:#37323e;font-family:flink regular"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 parallaxcontainer commonclass" id="parallax"
+                style="height: 50%;border: 1px solid black;">
+                <div class="col-sm-12" style="padding: 0px 20px;margin: 0 auto;position: relative;">
+                    <div id="fillingscrolldiv" class="fillingscrolldiv1" onscroll="fillingscroll()"
+                        style="position: absolute;width:100%;z-index:99;overflow-x: hidden;top:0px;left:0px;height:540px;background-color: transparent;overflow-y: scroll;">
+                        <div style="height:3000px">
+
+                            <img src="./tokenomics/2.png" class="c2" />
+
+
+                            <img src="./tokenomics/3.png" class="c3" />
+
+
+                            <img src="./tokenomics/4.png" class="c4" />
+
+
+                            <img src="./tokenomics/5.png" class="c5" />
+
+
+                        </div>
+                    </div>
+                    <div class="row" id="fillingscrollbig">
+                        <div class="col-sm-7 fillingdivleft"
+                            style="display: flex;justify-content:center;align-items:center;position: relative;">
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;width: 450px;text-align: end;font-size: 18px;top:40px;font-family: flink regular;right:60px">
+                                Research and development by marketing and psychologist phds to assist in
+                                creating surveys to shape the machine learning algorith,
+                            </div>
+                            <div class="relativepara1"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:50px;right:0px;background-color: #696969;">
+                            </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:100px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 22px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 16px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 20px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 15px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;">
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 20px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 15px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tokenomicsdiv2" style="justify-content:center;align-items:center">
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+
+                                        <i class="fa-brands fa-ethereum fa-bounce" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 35px;font-weight: 500;font-family: flink bold;">ERC
+                                            -
+                                            20</span><br />
+                                        <span style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                                <div class="mx-4" style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fa-solid fa-dollar-sign fa-flip" style="font-size:80px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span style="font-size: 30px;font-weight: 500;font-family: flink bold;">1
+                                            BILLION</span><br />
+                                        <span style="font-size: 22px;font-weight: 300;font-family: flink regular;">TOTAL
+                                            SUPPLY</span>
+                                    </div>
+                                </div>
+                                <div style="width: 160px;height: 250px;">
+                                    <div
+                                        style="height: 160px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                        <i class="fak fa-carrot-svg fa-beat" style="font-size:50px"></i>
+                                    </div>
+                                    <div
+                                        style="width: 100%;text-align: center;color:#000;line-height: 35px;margin-top: 10px;">
+                                        <span
+                                            style="font-size: 35px;font-weight: 500;font-family: flink bold;">$CTR</span><br />
+                                        <span style="font-size: 22px;font-weight: 300;font-family: flink regular;">ETH
+                                            TOKEN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 backimage">
+                            <!-- <div id="fillingscrolldiv" class="fillingscrolldiv1" onscroll="fillingscroll()"
+                                style="position: absolute;width:250px;z-index:99;overflow-x: hidden;top:0px;left:0px;height:540px;background-color: transparent;overflow-y: scroll;">
+                                <div style="height:3000px">
+
+                                    <img src="./tokenomics/full_c2.png" class="c2" />
+
+
+                                    <img src="./tokenomics/full_c3.png" class="c3" />
+
+
+                                    <img src="./tokenomics/full_c4.png" class="c4" />
+
+
+                                    <img src="./tokenomics/full_c5.png" class="c5" />
+
+
+                                </div>
+                            </div> -->
+                            <!-- <div id="fillingscrolldiv" class="fillingscrolldiv1" onscroll="fillingscroll()"
+                            style="position: absolute;width:250px;z-index:99;overflow-x: hidden;top:0px;left:0px;height:540px;background-color: transparent;overflow-y: scroll;">
+                            <div style="height:3000px" style="scroll-snap-type:y mandatory">
+
+                                <img src="./tokenomics/2.png" class="c2" style="scroll-snap-align: center;" />
+
+
+                                <img src="./tokenomics/3.png" class="c3" />
+
+
+                                <img src="./tokenomics/4.png" class="c4" />
+
+
+                                <img src="./tokenomics/5.png" class="c5" />
+
+
+                            </div>
+                        </div> -->
+
+
+                            <!-- <img src="./tokenomics/full_c2.png" style="position:absolute;zindex:99;width:250px;top:301px;left:0%;"/>, -->
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;width: 300px;text-align: start;font-size: 18px;top:80px;right:60px;font-family: flink regular;">
+                                The profit pool that will pay the tastemakers their incentives
+                            </div>
+                            <div class="relativepara"
+                                style="position: absolute;z-index:99;height: 2px;width: 50px;text-align: start;font-size: 18px;top:110px;left:240px;background-color: grey;">
+                            </div>
+                            <div class="section9text" style="pointer-events:none;">
+                                <div class="col-sm-12 filltext1"
+                                    style="text-align: start;align-items: center;padding: 25px 0px 5px 70px;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="filltext2">
+                                    <div class="col-sm-12" style="text-align: start;padding: 10px 0px 5px 10px">
+                                        <span style="font-size: 21px;">PROFIT SHARE POOL</span>
+                                    </div>
+                                    <div class="col-sm-12"
+                                        style="text-align: start;padding-left: 80px;margin-top: -15px">
+                                        <span style="font-size: 28px;font-family: flink black;"><b>10%</b></span>
+                                    </div>
+                                </div>
+                                <div class="filltext3">
+                                    <div class="col-sm-12" style="text-align: start;padding: 55px 0px 5px 30px">
+                                        <span style="font-size: 21px;">DEVELOPMENT</span>
+                                    </div>
+                                    <div class="col-sm-12"
+                                        style="text-align: start;padding-left: 80px;margin-top: -15px">
+                                        <span style="font-size: 28px;font-family: flink black;"><b>30%</b></span>
+                                    </div>
+                                </div>
+                                <div class="filltext4">
+                                    <div class="col-sm-12" style="text-align: start;padding: 110px 0px 5px 40px">
+                                        <span style="font-size: 21px;">PUBLIC SALE</span>
+                                    </div>
+                                    <div class="col-sm-12"
+                                        style="text-align: start;padding-left: 80px;margin-top: -10px">
+                                        <span style="font-size: 28px;font-family: flink black;">45%</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12" style="text-align: start;padding: 80px 0px 0px 10px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                            <div class="section9texttwo" style="pointer-events:none;">
+                                <div class="col-sm-12 filltext1_1" style="text-align: center;padding-top: 1px;">
+                                    <span style="font-size: 21px;">R & D</span><b
+                                        style="font-size: 25px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12 filltext2_1"
+                                    style="text-align: center;padding: 10px 0px 5px 0px;line-height: 30px">
+                                    <span style="font-size: 21px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12 filltext3_1"
+                                    style="text-align: center;padding: 45px 0px 5px 0px;line-height: 30px">
+                                    <span style="font-size: 21px;">DEVELOPMENT<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12 filltext4_1" style="text-align: center;padding: 90px 0px 5px 0px">
+                                    <span style="font-size: 21px;">PUBLIC SALE<br /><span
+                                            style="font-size: 28px;font-family: flink black;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 90px 0px 0px 0px;">
+                                    <span style="font-size: 21px;">PRIVATE SALE</span><b
+                                        style="font-size: 28px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="fillingdivscrollsmall" style="padding-top: 60px;">
+                        <div style="display:inline-block;float: left;width:40%;height:450px;padding-top: 120px;">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide tokenomicsdiv"
+                                data-bs-ride="carousel" style="width:100px;margin: 0 auto;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                                <i class="fa-brands fa-ethereum fa-bounce" style="font-size:50px"></i>
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 22px;font-weight: 500;font-family: flink bold;">ERC
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 16px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                                <i class="fa-solid fa-dollar-sign fa-flip" style="font-size:50px"></i>
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 20px;font-weight: 500;font-family: flink bold;">1
+                                                    BILLION</span><br />
+                                                <span
+                                                    style="font-size: 15px;font-weight: 300;font-family: flink regular;">TOTAL
+                                                    SUPPLY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div style="width: 100%;height: 200px;">
+                                            <div
+                                                style="height: 130px;width:100%;background-image:url(./tokenomics/icon_bg.png);background-position: center;background-repeat: no-repeat;background-size: 100%;display: flex;justify-content: center;align-items: center;">
+                                                <i class="fak fa-carrot-svg fa-beat" style="font-size:50px"></i>
+                                            </div>
+                                            <div
+                                                style="width: 100%;text-align: center;color:#000;line-height: 20px;margin-top: 0px;">
+                                                <span
+                                                    style="font-size: 20px;font-weight: 500;font-family: flink bold;">$CTR
+                                                    -
+                                                    20</span><br />
+                                                <span
+                                                    style="font-size: 15px;font-weight: 300;font-family: flink regular;">ETH
+                                                    TOKEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="backimage" style="display: inline-block;width:60%;">
+
+                            <div id="fillingscrolldiv2" class="fillingscrolldiv3" onscroll="fillingscrollsmall()" style="position: absolute;width:160px;z-index:99;overflow-x: hidden; left: 0;
+                                right: 0;
+                                margin-left: auto;
+                                margin-right: auto; height:380px;overflow-y: scroll;">
+                                <div style="height:3000px">
+
+                                    <img src="./tokenomics/full_c2.png" class="c2_1" />
+
+
+                                    <img src="./tokenomics/full_c3.png" class="c3_1" />
+
+
+                                    <img src="./tokenomics/full_c4.png" class="c4_1" />
+
+
+                                    <img src="./tokenomics/full_c5.png" class="c5_1" />
+
+
+                                </div>
+                            </div>
+
+                            <!-- <img src="./tokenomics/full_c2.png" style="position:absolute;zindex:99;width:250px;top:301px;left:0%;"/>, -->
+                            <div class="section9texttwo" style="pointer-events:none;">
+                                <div class="col-sm-12 filltext1_1" style="text-align: center;padding-top: 50px;">
+                                    <span style="font-size: 15px;">R & D</span><b
+                                        style="font-size: 16px;font-weight: 900;font-family: flink black;">
+                                        5%</b>
+                                </div>
+                                <div class="col-sm-12 filltext2_1"
+                                    style="text-align: center;padding: 10px 0px 5px 0px;line-height: 17px">
+                                    <span style="font-size: 15px;">PROFIT SHARE POOL<br /><span
+                                            style="font-size: 16px;font-family: flink black;"><b>10%</b></span></span>
+                                </div>
+                                <div class="col-sm-12 filltext3_1"
+                                    style="text-align: center;padding: 35px 0px 5px 0px;line-height: 20px">
+                                    <span style="font-size: 15px;">DEVELOPMENT<br /><span
+                                            style="font-size: 16px;font-family: flink black;"><b>30%</b></span></span>
+                                </div>
+                                <div class="col-sm-12 filltext4_1" style="text-align: center;padding: 60px 0px 5px 0px">
+                                    <span style="font-size: 15px;">PUBLIC SALE<br /><span
+                                            style="font-size: 16px;font-family: flink black;"><b>45%</b></span></span>
+                                </div>
+                                <div class="col-sm-12" style="text-align: center;padding: 45px 0px 0px 0px;">
+                                    <span style="font-size: 15px;">PRIVATE SALE</span><b
+                                        style="font-size: 16px;font-family: flink black;">
+                                        10%</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // console.log(window.innerWidth);
+                    let fillingscrolldiv = document.querySelector("#fillingscrolldiv");
+                    let fillingscrolldivsmall = document.querySelector('#fillingscrolldiv2');
+                    function fillingscroll() {
+                        console.log(document.querySelector("#fillingscrolldiv").scrollTop);
+                        document.querySelector('.c2').style.position = fillingscrolldiv.scrollTop > 157 ? 'sticky' : 'absolute';
+                        document.querySelector('.c2').style.top = fillingscrolldiv.scrollTop > 157 ? '300px' : '600px';
+                        document.querySelector('.filltext4').style.opacity = fillingscrolldiv.scrollTop > 157 ? 1 : 0.5;
+                        document.querySelector('.c3').style.position = fillingscrolldiv.scrollTop > 350 ? 'sticky' : 'absolute';
+                        document.querySelector('.c3').style.top = fillingscrolldiv.scrollTop > 350 ? '146px' : '950px';
+                        document.querySelector('.filltext3').style.opacity = fillingscrolldiv.scrollTop > 350 ? 1 : 0.5;
+                        document.querySelector('.c4').style.position = fillingscrolldiv.scrollTop > 550 ? 'sticky' : 'absolute';
+                        document.querySelector('.c4').style.top = fillingscrolldiv.scrollTop > 550 ? '62px' : '1550px';
+                        document.querySelector('.filltext2').style.opacity = fillingscrolldiv.scrollTop > 550 ? 1 : 0.5;
+                        document.querySelector('.c5').style.position = fillingscrolldiv.scrollTop > 750 ? 'sticky' : 'absolute';
+                        document.querySelector('.c5').style.top = fillingscrolldiv.scrollTop > 750 ? '25px' : '2150px';
+                        document.querySelector('.filltext1').style.opacity = fillingscrolldiv.scrollTop > 750 ? 1 : 0.5;
+                    }
+                    function fillingscrollsmall() {
+                        // alert('top')
+                        console.log(fillingscrolldivsmall.scrollTop);
+                        document.querySelector('.c2_1').style.position = fillingscrolldivsmall.scrollTop > 20 ? 'sticky' : 'absolute';
+                        document.querySelector('.c2_1').style.top = fillingscrolldivsmall.scrollTop > 20 ? '226px' : '600px';
+                        document.querySelector('.filltext4_1').style.opacity = fillingscrolldivsmall.scrollTop > 20 ? 1 : 0.5;
+                        document.querySelector('.c3_1').style.position = fillingscrolldivsmall.scrollTop > 200 ? 'sticky' : 'absolute';
+                        document.querySelector('.c3_1').style.top = fillingscrolldivsmall.scrollTop > 200 ? '128px' : '950px';
+                        document.querySelector('.filltext3_1').style.opacity = fillingscrolldivsmall.scrollTop > 200 ? 1 : 0.5;
+                        document.querySelector('.c4_1').style.position = fillingscrolldivsmall.scrollTop > 300 ? 'sticky' : 'absolute';
+                        document.querySelector('.c4_1').style.top = fillingscrolldivsmall.scrollTop > 300 ? '74px' : '1550px';
+                        document.querySelector('.filltext2_1').style.opacity = fillingscrolldivsmall.scrollTop > 300 ? 1 : 0.5;
+                        document.querySelector('.c5_1').style.position = fillingscrolldivsmall.scrollTop > 370 ? 'sticky' : 'absolute';
+                        document.querySelector('.c5_1').style.top = fillingscrolldivsmall.scrollTop > 370 ? '51px' : '2150px';
+                        document.querySelector('.filltext1_1').style.opacity = fillingscrolldivsmall.scrollTop > 370 ? 1 : 0.5;
+                    }
+                </script>
+            </div>
+            <div id="tastemaker" class="container-fluid parts commonclass m-0 section-testmaker pb-5 text-center"
+                style="height:50%;position: relative;">
+                <img src="./carrot-stick.png" id="carrotstick" />
+                <img src="./hand.png" class="hand" />
+                <span class="pt-5" id="tastetext">Become
+                    a
+                    <span class="text-white">Tastemaker</span>
+                </span>
+                <p class="bringtext">WE JUST BRING <span class="text-white" style="font-family: flink black;"><b>THE
+                            CARROT</b>,</span> NOT THE STICK</p>
+                <span class="tastemakertext pt-5" style="font-weight:900;font-family:flink black;color:#37323e">Become a
+                    <span class="text-white">Tastemaker</span></span>
+                <div class="carousel" id="tastemakercarousel" style="background-color:#f07e13"
+                    data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true,"prevNextButtons": false, "pageDots": false }'>
+                    <div class="carousel-cell-2">
+                        <div class="card2 text-center" style=""><i class="fa-sharp fa-solid fa-coins fa-bounce"
+                                style="font-size:100px;color:#f07e13"></i>
+                            <div class="card-body">
+                                <p class="card-text"
+                                    style="margin-top: 30px;font-size:1.5rem;color:#d9783a;font-family:flink bold;line-height: 28px;text-transform:uppercase;">
+                                    Earn a passive<br />
+                                    income</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell-2">
+                        <div class="card2 text-center" style=""><i class="fa-solid fa-clock fa-shake"
+                                style="font-size:100px;color:#f07e13"></i>
+                            <div class="card-body">
+                                <p class="card-text "
+                                    style="margin-top: 30px;font-size:1.5rem;color:#d9783a;font-family:flink bold;text-transform:uppercase;line-height: 30px;">
+                                    Choose your own<br />
+                                    working hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell-2">
+                        <div class="card2 text-center" style=""><i class="fa-solid fa-earth-africa fa-flip"
+                                style="font-size:100px;color:#f07e13"></i>
+                            <div class="card-body">
+                                <p class="card-text "
+                                    style="margin-top: 30px;font-size:1.5rem;color:#d9783a;font-family:flink bold;text-transform:uppercase;line-height: 30px;">
+                                    Work from anywhere<br />
+                                    in the world</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell-2">
+                        <div class="card2 text-center" style=""><i class="fa-solid fa-plane fa-fade"
+                                style="font-size:100px;color:#f07e13"></i>
+                            <div class="card-body">
+                                <p class="card-text "
+                                    style="margin-top: 30px;font-size:1.5rem;color:#d9783a;font-family:flink bold;line-height: 28px;text-transform:uppercase;">
+                                    Work on<br />the go</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell-2">
+                        <div class="card2 text-center" style=""><i class="fa-solid fa-copyright fa-fade"
+                                style="font-size:100px;color:#f07e13"></i>
+                            <div class="card-body" style="display:flex;justify-content:center;align-items:center">
+                                <p class="card-text"
+                                    style="margin-top: 30px;font-size:1.5rem;color:#f07e13;font-family:flink bold;text-transform:uppercase;line-height: 30px;">
+                                    Become an
+                                    ambassador<br />to your favorite brands</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="bring" style="font-weight:50;font-family:flink bold">WE JUST BRING <span class="text-white">THE
+                        CARROT,</span> NOT THE STICK</p>
+                <p id="link" class="text-white" style="font-family:flink regular">If you want to become a tastemaker,
+                    please click the link below to join the waitlist.</p>
+                <div><img class="card-img-top my-lg-2" src="./join_waiting_list.png" alt="Card image cap"
+                        style="width:25px;height:25px"> <a id="link" href="#"
+                        style="border-bottom:2px solid #fff;text-decoration:none;color:#fff;font-family:flink regular;font-weight:bolder">JOIN
+                        WAITING LIST</a></div>
+            </div>
+            <div id="formdiv" class="parts commonclass" style="height: 50%;">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/222421563292047"></script>
+            </div>
+            <div class="commonclass" id="roadmapbowl"
+                style="height:50%;width:100%;overflow-y: scroll;overflow-x: hidden;">
+
+                <div class="roadmapcontainer commonclass" style="scroll-behavior: smooth;">
+                    <img src="./road_map_bg.png"
+                        style="position: absolute;max-height:100%;right: 0px;margin-left: auto;margin-right: auto;max-width:100%;z-index:100;left: 0px;" />
+                    <div class="roadmapbackground" id="roadmap1">
+                        <div>
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Develop platform Prototype
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Presale of $CRT token
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Launch marketing campaign to drive<br />engagement in the $CRT token to
+                                    retail<br />customers
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Token listing on Coin Gecko and Coin MarketCap
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Secure Investor Financing
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Secure client brands/agencies trials for portal<br />membership
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Build advisory board
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Develop Focus Block portal ready<br />for Beta access
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom:70px;left:100px;font-size:25px;font-family: flink black;">
+                            <span style="margin-top: 30px">PHASE</span> <img class="mx-2 mt-5"
+                                src="./Road_Map/point_1.png" style="height:80px;" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(348deg);height:30px;position: absolute;top:327px;left:120px" />
+
+                        <div style="position: absolute;z-index:100;top:0px;left:510px">
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Launch Focus Block portal allowing users to register<br />and create profiles
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Onboard first 1000 users
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Run dedicated ad campaigns to build user base
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Build customer database to use and test the Beta<br />environment based on global
+                                    top 1000
+                                    advertising<br />and public relations agencies
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom: 50px;left:590px;font-size:25px;font-family: flink black;">
+                            <span style="margin-top: 20px;">PHASE</span> <img class="mx-2" src="./Road_Map/point_2.png"
+                                style="height:80px;" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(26deg);height:30px;position: absolute;bottom:70px;left:750px" />
+
+                        <div style="position: absolute;z-index:100;top:50px;left:1110px">
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Progressive web application
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Direct Advertising through portal
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Metaverse integration - live taste<br />tests on Meta / Sandbox etc
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    NFT distribution for qualifying<br />consumer level
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    CEX Listing
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:300;top: 205px;left:1200px;font-size:25px;font-family: flink black;">
+                            <span style="margin-top: 30px;">PHASE </span><img class="mx-2" src="./Road_Map/point_3.png"
+                                style="height:80px;" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(314deg);height:30px;position: absolute;top:119px;left:1365px" />
+
+                        <div style="position: absolute;z-index:100;top:60px;left:1700px">
+                            <div class="form-check roadmaptext" style="width:250px">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1"
+                                    style="box-shadow: none;display:inline-block">
+                                    Machine learning algorithm that defines what “ Taste “ is . Will enable brands to
+                                    build
+                                    highly
+                                    focused virtual research groups and generate insights without human interaction, at
+                                    much
+                                    lower
+                                    cost.
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-2" style="width: 250px">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 4px solid #F07E13;
+                    width: 15px;
+                    height: 15px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    “Taste Passport '' - an ERC-1155 Non fungible token which will allow users to
+                                    monetise their
+                                    choices on the wider internet by providing permissioned access to their taste
+                                    profile and
+                                    allowing advertisers to target them. Will also allow brands to request real time
+                                    feedback on
+                                    any
+                                    web accessible site content. Rewards will be in $FBLOCK tokens providing upward buy
+                                    pressure.
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom: 150px;left:1520px;font-size:25px;font-family: flink black;">
+                            PHASE <img class="mx-2" src="./Road_Map/point_4_1.png" style="height:80px;" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(42deg);height:30px;position: absolute;top:105px;left:1560px" />
+
+                    </div>
+                    <!-- <div style="background-color:red;display: inline-block;float: left;">ghchfhgf<br/>ghchfhgf<br/>ghchfhgf<br/>ghchfhgf<br/></div> -->
+                    <div class="roadmapbackground" id="roadmap2">
+
+                        <div>
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 5px solid #F07E13;
+                    width: 20px;
+                    height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Develop platform Prototype
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Presale of $CRT token
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Launch marketing campaign to drive<br />engagement in the $CRT token to
+                                    retail<br />customers
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Token listing on Coin Gecko and Coin MarketCap
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Secure Investor Financing
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Secure client brands/agencies trials for portal<br />membership
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext my-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Build advisory board
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Develop Focus Block portal ready<br />for Beta access
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;top:170px;left:1100px;font-size:45px;font-family: flink black;">
+                            PHASE <img class="mx-4 mt-5" src="./Road_Map/point_1.png" style="height:140px" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(338deg);height:60px;position: absolute;top:395px;left:1000px" />
+                        <img src="./Road_Map/logo_top.png"
+                            style="height:160px;position: absolute;bottom: -20px;left:1250px" />
+                        <div style="position: absolute;z-index:100;top:27px;left:2300px">
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 5px solid #F07E13;
+                    width: 20px;
+                    height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Launch Focus Block portal allowing users to register<br />and create profiles
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Onboard first 1000 users
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Run dedicated ad campaigns to build user base
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Build customer database to use and test the Beta<br />environment based on global
+                                    top 1000
+                                    advertising<br />and public relations agencies
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom: 30px;left:2200px;font-size:45px;font-family: flink black;">
+                            <span style="margin-top: 30px;">PHASE</span> <img class="mx-2" src="./Road_Map/point_2.png"
+                                style="height:140px" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(26deg);height:60px;position: absolute;bottom:185px;left:2250px" />
+                        <img src="./logo_txt_below.png" style="height:160px;position: absolute;top: 0px;left:1750px" />
+                        <div style="position: absolute;z-index:100;top:27px;left:3500px">
+                            <div class="form-check roadmaptext">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 5px solid #F07E13;
+                    width: 20px;
+                    height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Progressive web application
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Direct Advertising through portal
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    Metaverse integration - live taste tests on Meta /<br />Sandbox etc
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    NFT distribution for qualifying consumer level
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    CEX Listing
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom: 95px;left:3700px;font-size:45px;font-family: flink black;">
+                            <span style="margin-top: 40px;">PHASE </span><img class="mx-2" src="./Road_Map/point_3.png"
+                                style="height:140px" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(7deg);height:60px;position: absolute;bottom:210px;left:3700px" />
+                        <img src="./Road_Map/logo_top.png"
+                            style="height:160px;position: absolute;bottom: -10px;left:4300px" />
+                        <div style="position: absolute;z-index:100;top:27px;left:5540px">
+                            <div class="form-check roadmaptext" style="width:550px">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                    float: left;
+                    background-color: #fff;
+                    border: 5px solid #F07E13;
+                    width: 20px;
+                    height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1"
+                                    style="box-shadow: none;display:inline-block">
+                                    Machine learning algorithm that defines what “ Taste “ is . Will enable brands to
+                                    build
+                                    highly
+                                    focused virtual research groups and generate insights without human interaction, at
+                                    much
+                                    lower
+                                    cost.
+                                </label>
+                            </div>
+                            <div class="form-check roadmaptext mt-4" style="width: 550px">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" style="box-shadow: none;display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border: 5px solid #F07E13;
+                            width: 20px;
+                            height: 20px;" checked>
+                                <label class="form-check-label" for="flexRadioDefault1" style="display:inline-block">
+                                    “Taste Passport '' - an ERC-1155 Non fungible token which will allow users to
+                                    monetise their
+                                    choices on the wider internet by providing permissioned access to their taste
+                                    profile and
+                                    allowing advertisers to target them. Will also allow brands to request real time
+                                    feedback on
+                                    any
+                                    web accessible site content. Rewards will be in $FBLOCK tokens providing upward buy
+                                    pressure.
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div
+                            style="display:flex;justify-content:center;align-items:center;position:absolute;z-index:100;bottom: 250px;left:5160px;font-size:45px;font-family: flink black;">
+                            PHASE <img class="mx-2" src="./Road_Map/point_4_1.png" style="height:140px;" />
+                        </div>
+                        <img src="./Road_Map/truck_s.png"
+                            style="transform: rotate(28deg);height:60px;position: absolute;bottom:425px;left:5160px" />
+                        <img src="./Road_Map/logo_top.png"
+                            style="height:160px;position: absolute;bottom: -10px;left:4750px" />
+                    </div>
+                    <!-- <div id="dummybox" style="height:10px;width:10px;background-color:red;margin-right:0px;float:right"></div> -->
+                </div>
+
+
+            </div>
+
+            <script>
+                var scroller1 = {};
+                scroller1.e = document.querySelector(".roadmapcontainer");
+
+                if (scroller1.e.addEventListener) {
+                    scroller1.e.addEventListener("mousewheel", MouseWheelHandlerRoadmap);
+                    scroller1.e.addEventListener("DOMMouseScroll", MouseWheelHandlerRoadmap);
+                } else scroller1.e.attachEvent("onmousewheel", MouseWheelHandlerRoadmap);
+
+
+                function MouseWheelHandlerRoadmap(e) {
+                    console.log(document.querySelector('#roadmap2').getBoundingClientRect().left, document.querySelector('#roadmap2').getBoundingClientRect().right);
+
+                    // console.log(document.querySelector(".roadmapcontainer").scrollLeft);
+                    var e = window.event || e;
+                    // let num = -window.outerWidth;
+                    var delta = -window.innerWidth * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+                    var pst = $('.roadmapcontainer').scrollLeft() + delta;
+
+                    // console.log(e.wheelDeltaY);
+                    if (e.wheelDeltaY > 0) {
+                        console.log('up');
+                        if (document.querySelector('#roadmap2').getBoundingClientRect().left <= 1500) {
+                            e.preventDefault();
+                        }
+
+                    }
+                    else {
+                        if (document.querySelector('#roadmap2').getBoundingClientRect().right >= 1700) {
+                            //     console.log('stopeed');
+                            e.preventDefault();
+                        }
+
+                    }
+                    $('.roadmapcontainer').animate({
+                        scrollLeft: pst
+                    }, 110);
+
+                    return false;
+                    //     if (e.originalEvent.wheelDelta >= 0) {
+                    //         console.log('Scroll up');
+                    //     }
+                    //     else {
+                    //         console.log('Scroll down');
+                    //     }
+                    // };
+                    // console.log(document.querySelector('.roadmapbackground').getBoundingClientRect().right);
+
+
+
+
+                }
+            </script>
+            <!-- <div id="ourteam" class="commonclass" style="background-color:#37323e;height:50%;margin:auto">
+                <div class="col-sm-12 text-center " style="padding:5rem 0 2rem 0">
+                    <h1 class="ourteamdiv"
+                    style="font-weight:400"><b><span class="ourteam" style="color:#fff">Our</span> <span class="ourteam"
+                                style="color:#f07e13">Team</span></b></h1>
+                </div>
+                <div class="col-sm-12 text-center parat" style="color:#fff;font-family:flink regular"><span>We will also
+                        build out an advisory board to provide strategic and scientific insights for<br>continued
+                        platform growth. We are targeting individuals who hold doctorate degrees
+                        in<br>marketing,behavioural science, and also thought leadership in public relations
+                        and/or<br>marketing across a breadth of demographics.</span></div>
+                <div class="col-sm-12 text-center" style="padding:5rem 0 13px 0">
+                    <div class="imgoverflow">
+                        <div><img class="imggrid" src="./10/2.png" alt=""> <img class="imggrid" src="./10/3.png" alt="">
+                            <img class="imggrid" src="./10/4.png" alt=""> <img class="imggrid" src="./10/5.png" alt="">
+                            <img class="imggrid" src="./10/6.png" alt=""> <img class="imggrid" src="./10/7.png" alt="">
+                            <img class="imggrid" src="./10/8.png" alt=""> <img class="imggrid" src="./10/10.png" alt="">
+                        </div>
+                        <div><img class="imggrid" src="./10/1.png" alt=""> <img class="imggrid" src="./10/2.png" alt="">
+                            <img class="imggrid" src="./10/3.png" alt=""> <img class="imggrid" src="./10/4.png" alt="">
+                            <img class="imggrid" src="./10/5.png" alt=""> <img class="imggrid" src="./10/6.png" alt="">
+                            <img class="imggrid" src="./10/7.png" alt=""> <img class="imggrid" src="./10/8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-sm-12 commonclass" id="ourteam" style="background-color:#37323e;height: 50%;">
+                <div class="col-sm-12 text-center">
+                    <h1 style="font-family:flink black"><b><span class="advisory" style="color:#fff">Our</span><span
+                                class="advisory" style="color:#d9783a">Team</span></b></h1>
+                </div>
+                <div class="col-sm-12 text-center parat my-3" style="font-family:flink regular;color:#fff"><span>We
+                        will
+                        also build
+                        out an advisory board to provide strategic and scientific insights for<br>continued platform
+                        growth. We are targeting individuals who hold doctorate degrees in<br>marketing,behavioural
+                        science, and also thought leadership in public relations and/or<br>marketing across a
+                        breadth of
+                        demographics.</span></div>
+                <div class="col-sm-12 text-center" style="padding:5px 0 5rem 0">
+                    <div class="imgoverflow">
+                        <div><img class="imggrid" src="./10/1.png" alt="">
+                            <img class="imggrid" src="./10/2.png" alt=""> <img class="imggrid" src="./10/3.png" alt="">
+                            <img class="imggrid" src="./10/4.png" alt=""> <img class="imggrid" src="./10/5.png" alt="">
+                            <img class="imggrid" src="./10/6.png" alt=""> <img class="imggrid" src="./10/7.png" alt="">
+                            <img class="imggrid" src="./10/8.png" alt="">
+                        </div>
+                        <div class="mt-1">
+                            <img class="imggrid" src="./10/2/1.png" alt="">
+                            <img class="imggrid" src="./10/2/2.png" alt=""> <img class="imggrid" src="./10/2/3.png" alt="">
+                            <img class="imggrid" src="./10/2/4.png" alt=""> <img class="imggrid" src="./10/2/5.png" alt="">
+                            <img class="imggrid" src="./10/2/6.png" alt=""> <img class="imggrid" src="./10/2/7.png" alt="">
+                            <img class="imggrid" src="./10/2/8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 commonclass" id="advisoryboard" style="height: 50%;">
+                <div class="col-sm-12 text-center">
+                    <h1 style="font-family:flink black"><b><span class="advisory"
+                                style="color:#000">Advisory</span><span class="advisory" style="color:#d9783a">
+                                Board</span></b></h1>
+                </div>
+                <div class="col-sm-12 text-center parat my-3" style="font-family:flink regular"><span>We will also
+                        build
+                        out an advisory board to provide strategic and scientific insights for<br>continued platform
+                        growth. We are targeting individuals who hold doctorate degrees in<br>marketing,behavioural
+                        science, and also thought leadership in public relations and/or<br>marketing across a
+                        breadth of
+                        demographics.</span></div>
+                <div class="col-sm-12 text-center" style="padding:5px 0 5rem 0">
+                    <div class="imgoverflow">
+                        <div><img class="imggrid" src="./10/2.png" alt=""> <img class="imggrid" src="./10/3.png" alt="">
+                            <img class="imggrid" src="./10/4.png" alt=""> <img class="imggrid" src="./10/5.png" alt="">
+                            <img class="imggrid" src="./10/6.png" alt=""> <img class="imggrid" src="./10/7.png" alt="">
+                            <img class="imggrid" src="./10/8.png" alt=""> <img class="imggrid" src="./10/9.png" alt="">
+                        </div>
+                        <div class="mt-1"><img class="imggrid" src="./10/2/1.png" alt=""> <img class="imggrid"
+                                src="./10/2/2.png" alt=""> <img class="imggrid" src="./10/2/3.png" alt=""> <img
+                                class="imggrid" src="./10/2/4.png" alt=""> <img class="imggrid" src="./10/2/5.png" alt="">
+                            <img class="imggrid" src="./10/2/6.png" alt=""> <img class="imggrid" src="./10/2/7.png" alt="">
+                            <img class="imggrid" src="./10/2/8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 commonclass footersmall" id="footer"
+                style="padding:20px 20px 10px 20px;background-color:#37323e;height:45%;">
+                <div class="row">
+                    <div class="col-sm-12 mt-2">
+                        <div class="row">
+                            <div class="col-sm-3" style="display:flex;justify-content:center;align-items:center">
+                                <img src="./1/logo.png" style="height:80px" />
+                            </div>
+                            <div class="col-sm-4 footertext1" style="font-size: 14px;"><b
+                                    style="font-family:flink black;font-size:16px">Address:</b><br />Block Media Ltd
+                                -
+                                67
+                                Fort Street, Artemis House, Grand Cayman, KY1-1111, Cayman Islands.</div>
+                            <div class="col-sm-5 footertext2" style="font-size: 14px;"><b
+                                    style="font-family:flink black;font-size:16px">Contact
+                                    Us:</b><br />Buying assistance: buy@dash2.trade<br />General enquiries:
+                                admin@dash2.trade<br />Marketing: marketing@dash2.trade<br />Press: pr@dash2.trade
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mt-4">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8"
+                                style="text-align:center;font-family:flink regular;font-size:14px;padding:10px 20px;background-color:#322d3a;color:#fff;border-radius:12px">
+                                Disclaimer: Your investment may go down as well as up in value. Cryptocurrency is
+                                not
+                                regulated in the UK.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mt-2" style="background-color:#000;padding:5px 10px 10px 10px">
+                        <div class="copyright" style="font-size: 14px;">Copyright 2022 carrot-research.com <a
+                                class="linkhover" style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/17nJKkuEwK7fDDzoIQt1T9f_1C1i5rc2ohx4XYZS_JWI/edit">Privacy
+                                Policy</a> | <a class="linkhover" style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/15ypkNBk3_tDwjqinmZGlpdvkiAFp7m-zRmwww1kQoio/edit">Cookie
+                                Policy</a> | <a class="linkhover" style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/15k0BW6Wp2AnjVw8t5qy0ubuHahpQs7DQ-pqnXlZFNI0/edit">Terms
+                                & Condition</a></div>
+                        <div class="icons"><a href="https://twitter.com/carrot_research"><img class="iconimg mx-1"
+                                    src="./12/twitter.png" /></a><a
+                                href="https://www.facebook.com/Carrot-Research-101029866085111"></a><img
+                                class="iconimg mx-1" src="./12/insta.png" /> <img class="iconimg mx-1"
+                                src="./12/telegram.png" /> <img class="iconimg mx-1" src="./12/ic2.png" /> <a
+                                href="https://www.reddit.com/user/Carrot-Research"><img class="iconimg mx-1"
+                                    src="./12/ic1.png" /></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 commonclass footerbig" id="footer"
+                style="padding:40px 20px 0 20px;background-color:#37323e">
+                <div class="row">
+                    <div class="col-sm-12 mt-4">
+                        <div class="row">
+                            <div class="col-sm-3" style="display:flex;justify-content:center;align-items:center">
+                                <img src="./1/logo.png" style="height:170px" />
+                            </div>
+                            <div class="col-sm-4 footertext1"><b
+                                    style="font-family:flink bold;font-size:30px">Address:</b><br />Block Media Ltd
+                                - 67
+                                Fort Street, Artemis House, Grand Cayman, KY1-1111, Cayman Islands.</div>
+                            <div class="col-sm-5 footertext2"><b style="font-family:flink bold;font-size:30px">Contact
+                                    Us:</b><br />Buying assistance: buy@dash2.trade<br />General enquiries:
+                                admin@dash2.trade<br />Marketing: marketing@dash2.trade<br />Press: pr@dash2.trade
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 my-5">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8"
+                                style="text-align:center;font-family:flink regular;font-size:19px;padding:30px 20px;background-color:#322d3a;color:#fff;border-radius:12px">
+                                Disclaimer: Your investment may go down as well as up in value. Cryptocurrency is
+                                not
+                                regulated in the UK.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="background-color:#000;padding:20px 20px">
+                        <div class="copyright">Copyright 2022 carrot-research.com <a class="linkhover"
+                                style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/17nJKkuEwK7fDDzoIQt1T9f_1C1i5rc2ohx4XYZS_JWI/edit">Privacy
+                                Policy</a> | <a class="linkhover" style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/15ypkNBk3_tDwjqinmZGlpdvkiAFp7m-zRmwww1kQoio/edit">Cookie
+                                Policy</a> | <a class="linkhover" style="text-decoration:none;color:#fff"
+                                href="https://docs.google.com/document/d/15k0BW6Wp2AnjVw8t5qy0ubuHahpQs7DQ-pqnXlZFNI0/edit">Terms
+                                & Condition</a></div>
+                        <div class="icons"><a href="https://twitter.com/carrot_research"><img class="iconimg mx-1"
+                                    src="./12/twitter.png" /></a><a
+                                href="https://www.facebook.com/Carrot-Research-101029866085111"></a><img
+                                class="iconimg mx-1" src="./12/insta.png" /> <img class="iconimg mx-1"
+                                src="./12/telegram.png" /> <img class="iconimg mx-1" src="./12/ic2.png" /> <a
+                                href="https://www.reddit.com/user/Carrot-Research"><img class="iconimg mx-1"
+                                    src="./12/ic1.png" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script>
+
+    <script>
+        //  const gra = function(min, max) {
+        //     return Math.random() * (max - min) + min;
+        // }
+
+        // const gri = function(min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+
+        // const init = function(){
+        // 	let items = document.querySelectorAll('li');
+        // 	for (let i = 0; i < items.length; i++){
+        // 		items[i].style.minHeight = gra(20,30) + 'vh';
+        // 		items[i].style.background = randomColor({luminosity: 'light'});
+        // 	}
+
+        // 	cssScrollSnapPolyfill()
+        // }
+        // init();
+
+
+        const slider = document.querySelector('.testmakeroverflow1');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+
+        });
+
+        const sliders = document.querySelector('.overflow1');
+        let isDowns = false;
+        let startXs;
+        let scrollLefts;
+        sliders.addEventListener('mousedown', (e) => {
+            isDowns = true;
+            sliders.classList.add('active');
+            startXs = e.pageX - sliders.offsetLeft;
+            scrollLefts = sliders.scrollLeft;
+        });
+        sliders.addEventListener('mouseleave', () => {
+            isDowns = false;
+            sliders.classList.remove('active');
+        });
+        sliders.addEventListener('mouseup', () => {
+            isDowns = false;
+            sliders.classList.remove('active');
+        });
+        sliders.addEventListener('mousemove', (e) => {
+            if (!isDowns) return;
+            e.preventDefault();
+            const x = e.pageX - sliders.offsetLeft;
+            const walk = (x - startXs) * 3; //scroll-fast
+            sliders.scrollLeft = scrollLefts - walk;
+            // console.log(walk);
+        });
+        var containerscroll = $('#containerdivscroll');
+        var lastKnownPos = containerscroll.scrollTop();
+        function scrollParagraph() {
+            // console.log(containerscroll.scrollTop());
+            let scroll = containerscroll.scrollTop()
+
+            //user is scrolling down, current position > last position
+            // coarse();
+            if (lastKnownPos > containerscroll.scrollTop()) {
+                //user is scrolling up, current position < last position
+                // undo();
+
+                $('.scrollimg').attr('data-scroll-speed', '5');
+                // console.log(lastKnownPos, containerscroll.scrollTop());
+                if (containerscroll.scrollTop() >= 610 && containerscroll.scrollTop() <= 630) {
+                    // document.
+                    $(".scrollimg").css("top", "510px");
+                    $(".scrollimg2").css("top", "170px");
+                    containerscroll.animate({
+                        scrollTop: $("#section1").offset().top - containerscroll.offset().top + containerscroll.scrollTop()
+                    });
+                }
+                lastKnownPos = containerscroll.scrollTop();
+            } else {
+
+                // console.log(lastKnownPos, containerscroll.scrollTop());
+                $('.scrollimg').attr('data-scroll-speed', '5');
+                if (containerscroll.scrollTop() >= 100 && containerscroll.scrollTop() <= 121) {
+
+                    $(".scrollimg").css("top", "0" + (scroll / 0.99) + "px");
+                    $(".scrollimg2").css("top", "-70px");
+                    containerscroll.animate({
+                        scrollTop: $("#section2").offset().top - containerscroll.offset().top + containerscroll.scrollTop()
+                    });
+                }
+                // if (containerscroll.scrollTop() >= 800 && containerscroll.scrollTop() <= 820) {
+                //     containerscroll.animate({
+                //         scrollTop: $(".presalecontainer").offset().top - containerscroll.offset().top + containerscroll.scrollTop()
+                //     });
+                // }
+                lastKnownPos = containerscroll.scrollTop();
+            }
+
+        }
+        var containerpartscroll = $('#containerpart');
+        var lastknownpartpos = containerpartscroll.scrollTop();
+        function scrollDivs() {
+            // console.log(document.querySelector('.parabig').getBoundingClientRect().top);
+            if (document.querySelector('.bgimgontext').getBoundingClientRect().top <= 0.6) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "block";
+                document.querySelector('#logo3').style.display = "none"
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo5').style.display = "block";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('.parabig').getBoundingClientRect().top <= 0.6 || document.querySelector('#parasmall1').getBoundingClientRect().top <= 0.6 && document.querySelector('#parasmall2').getBoundingClientRect().top <= 0.6) {
+                document.querySelector('#logo2').style.display = "block";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo5').style.display = "block";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#section2').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#ham1').style.display = "none";
+                document.querySelector('#ham2').style.display = "none";
+            }
+            if (document.querySelector('.presalecontainer').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "block";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "block";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#section6').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "block";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "block";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#ctasection1').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "block";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#ctasection2').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "block";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#play').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "block";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "block";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#parallax').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "block";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "block";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#tastemaker').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "block";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "block";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#formdiv').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "block";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "block";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#ourteam').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "block";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "block";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "none";
+            }
+            if (document.querySelector('#advisoryboard').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "block";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "block";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "block";
+                document.querySelector('#ham2').style.display = "block";
+            }
+            if (document.querySelector('#roadmapbowl').getBoundingClientRect().top <= 2) {
+                document.querySelector('#logo2').style.display = "none";
+                document.querySelector('#logo1').style.display = "none";
+                document.querySelector('#logo3').style.display = "none";
+                document.querySelector('#logo5').style.display = "none";
+                document.querySelector('#logo4').style.display = "none";
+                document.querySelector('#logo6').style.display = "none";
+                document.querySelector('#ham1').style.display = "none";
+                document.querySelector('#ham2').style.display = "none";
+            }
+            // if (document.querySelector('#footer').getBoundingClientRect().top <= 2) {
+            //     document.querySelector('#logo2').style.display = "block";
+            //     document.querySelector('#logo1').style.display = "none";
+            //     document.querySelector('#logo3').style.display = "none"
+            // }
+
+            document.querySelector("#moveup").style.display = containerpartscroll.scrollTop() > 139 ? "block" : "none"
+
+            document.querySelector('.crossbutton').style.display = containerpartscroll.scrollTop() > 139 ? "block" : "none";
+            // console.log(containerpartscroll.scrollTop());
+            if (containerpartscroll.scrollTop() > 139 && containerpartscroll.scrollTop() < 200) {
+                // alert('139')
+                // section4.scrollIntoView();
+                document.querySelector('#navigationbar1').style.top = "0%";
+                document.querySelector('.navbar').style.top = "-100%";
+                // document.querySelector('.section').style.top = "200px";
+            }
+            else if (containerpartscroll.scrollTop() < 139) {
+                document.querySelector('#navigationbar1').style.top = "-100%";
+                document.querySelector('.navbar').style.top = "0%";
+                // document.querySelector('.section').style.top = "150px";
+            }
+            // let scroll = containerpartscroll.scrollTop()
+            if (lastknownpartpos < containerpartscroll.scrollTop()) {
+                // console.log('down');
+                // console.log(window.innerWidth>576);
+                // console.log(containerpartscroll.scrollTop(), lastknownpartpos);
+                // let a = window.innerWidth;
+                // let presalescrollmin = a > 676 ? 900 : 402;
+                // let presalescrollmax = a > 676 ? 980 : 500;
+                // let section6scrollmin = a > 676 ? 1590 : 1202;
+                // let section6scrollmax = a > 676 ? 1650 : 1510;
+                // let carouselscrollmin = a > 676 ? 2488 : 1750;
+                // let carouselscrollmax = a > 676 ? 2508 : 1955;
+                // let playscrollmin = a > 676 ? 3276 : 2280;
+                // let playscrollmax = a > 676 ? 3296 : 2285;
+                // let fillingscrollmin = a > 676 ? 4044 : 3192;
+                // let fillingscrollmax = a > 676 ? 4184 : 3194;
+                // let tastemakerscrollmin = a > 676 ? 4702 : 3900;
+                // let tastemakerscrollmax = a > 676 ? 4872 : 3900;
+                // let formdivscrollmin = a > 676 ? 5611 : 4589;
+                // let formdivscrollmax = a > 676 ? 5720 : 4591;
+                // let ourteamscrollmin = a > 676 ? 6400 : 5389;
+                // let ourteamscrollmax = a > 676 ? 6420 : 5391;
+                // let advisoryscrollmin = a > 676 ? 7105 : 6000;
+                // let advisoryscrollmax = a > 676 ? 8010 : 6002;
+                // console.log(lastknownpartpos, containerpartscroll.scrollTop());
+                // if (containerpartscroll.scrollTop() >= 100 && containerpartscroll.scrollTop() <= 181) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#containerdivscroll").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= presalescrollmin && containerpartscroll.scrollTop() <= presalescrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $(".presalecontainer").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= section6scrollmin && containerpartscroll.scrollTop() <= section6scrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#section6").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= 2488 && containerpartscroll.scrollTop() <= 2508 && window.innerWidth>576) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= 1920 && containerpartscroll.scrollTop() <= 1922) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $(".smallcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= playscrollmin && containerpartscroll.scrollTop() <= playscrollmax && window.innerWidth>576) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#play").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= fillingscrollmin && containerpartscroll.scrollTop() <= fillingscrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#fillingScroll").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= tastemakerscrollmin && containerpartscroll.scrollTop() <= tastemakerscrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#tastemaker").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= formdivscrollmin && containerpartscroll.scrollTop() <= formdivscrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#formdiv").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= ourteamscrollmin && containerpartscroll.scrollTop() <= ourteamscrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#ourteam").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                // if (containerpartscroll.scrollTop() >= advisoryscrollmin && containerpartscroll.scrollTop() <= advisoryscrollmax) {
+                //     containerpartscroll.animate({
+                //         scrollTop: $("#advisoryboard").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //         // scrollTop: $(".bigcarousel").offset().top - containerpartscroll.offset().top + containerpartscroll.scrollTop()
+                //     });
+                // }
+                lastknownpartpos = containerpartscroll.scrollTop();
+
+            } else {
+                lastknownpartpos = containerpartscroll.scrollTop();
+                // console.log('up');
+                // console.log(containerpartscroll.scrollTop(), lastknownpartpos);
+            }
+
+
+        }
+        // var container = $('#containerdiv');
+        // var lastKnownPos = window.pageYOffset();
+        // function scrollParagraph1() {
+
+        //     //user is scrolling down, current position > last position
+        //     // coarse();
+        //     if (lastKnownPos > window.pageYOffset()) {
+        //         //user is scrolling up, current position < last position
+        //         // undo();
+        //         console.log(lastKnownPos, window.pageYOffset());
+        //         var scrollTo = $("#blankdiv");
+        //         var position = scrollTo.offset().top - container.offset().top + window.pageYOffset();
+        //         if (window.pageYOffset() <= 380 && window.pageYOffset() >= 300) {
+        //             container.animate({
+        //                 scrollTop: position
+        //             });
+        //         }
+        //         else if (window.pageYOffset() >= 1414 && window.pageYOffset() <= 1434) {
+        //             container.animate({
+        //                 scrollTop: $("#section4").offset().top - container.offset().top + window.pageYOffset()
+        //             });
+        //         }
+        //         else if (window.pageYOffset() >= 1414 && window.pageYOffset() <= 1434) {
+        //             container.animate({
+        //                 scrollTop: $("#section6").offset().top - container.offset().top + window.pageYOffset()
+        //             });
+        //         }
+        //     } else {
+        //         console.log(lastKnownPos, window.pageYOffset());
+        //         // var scrollTo = $("#section4");
+        //         // var position = $("#section4").offset().top - container.offset().top + window.pageYOffset();
+        //         if (window.pageYOffset() >= 400 && window.pageYOffset() <= 421) {
+        //             container.animate({
+        //                 scrollTop: $("#section4").offset().top - container.offset().top + window.pageYOffset()
+        //             });
+        //         }
+        //         if (window.pageYOffset() >= 900 && window.pageYOffset() <= 920) {
+        //             container.animate({
+        //                 scrollTop: $(".presalecontainer").offset().top - container.offset().top + window.pageYOffset()
+        //             });
+        //         }
+        //     }
+        //     lastKnownPos = window.pageYOffset();
+
+
+
+
+        // }
+        // function loadingfunc() {
+        //     setTimeout(() => {
+        //     document.querySelector("#loading").style.height="0vh";
+        //     // document.querySelector("#document").style.display="block";
+        // }, 1000);
+        // setTimeout(() => {
+        //     document.querySelector("#loadingimg").style.display="none";
+        //     // document.querySelector("#document").style.display="block";
+        // }, 1500);
+        // }
+
+        document.querySelector("#moveup").addEventListener("click", () => {
+            // alert('clicked')
+            document.querySelector("#containerpart").scrollTop = 0
+        })
+
+
+        // onscroll = () => {
+        //     console.log(window.pageYOffset);
+
+        //     document.querySelector("#moveup").style.display = window.pageYOffset > 139 ? "block" : "none"
+
+        //     document.querySelector('.crossbutton').style.display = window.pageYOffset > 139 ? "block" : "none";
+        //     console.log(window.pageYOffset);
+        //     if (window.pageYOffset > 139) {
+        //         // alert('139')
+        //         // section4.scrollIntoView();
+        //         document.querySelector('#navigationbar1').style.top = "0%";
+        //         document.querySelector('.navbar').style.top = "-100%";
+        //         // document.querySelector('.section').style.top = "200px";
+        //     }
+        //     else if (window.pageYOffset < 139) {
+        //         document.querySelector('#navigationbar1').style.top = "-100%";
+        //         document.querySelector('.navbar').style.top = "0%";
+        //         // document.querySelector('.section').style.top = "150px";
+        //     }
+        // }
+        function nav1() {
+            // alert('click')
+            document.querySelector('#navigationbar1').style.top = "-100%";
+            document.querySelector('#navbig').style.top = "0px";
+            document.querySelector('.crossbutton').style.display = 'block'
+        }
+        function nav2() {
+            document.querySelector('#navigationbar1').style.top = "0px";
+            document.querySelector('#navbig').style.top = "-100%";
+        }
+
+
+        // const contain = document.querySelector("#contains"); contain.addEventListener("scroll", (o => {  let n = contain.scrollTop >= 410 ? "520px" : "110px", e = contain.scrollTop >= 795 ? "870px" : "220px", t = contain.scrollTop >= 410 ? "absolute" : "sticky", c = contain.scrollTop >= 795 ? "absolute" : "sticky", l = contain.scrollTop >= 970 ? "1055px" : "110px", i = contain.scrollTop >= 1655 ? "1725px" : "220px", s = contain.scrollTop >= 970 ? "absolute" : "sticky", p = contain.scrollTop >= 1655 ? "absolute" : "sticky", r = contain.scrollTop >= 1530 ? "1595px" : "110px", d = contain.scrollTop >= 2515 ? "2580px" : "220px", a = contain.scrollTop >= 1530 ? "absolute" : "sticky", m = contain.scrollTop >= 2515 ? "absolute" : "sticky", y = contain.scrollTop >= 2040 ? "2125px" : "110px", u = contain.scrollTop >= 3360 ? "3435px" : "220px", w = contain.scrollTop >= 2040 ? "absolute" : "sticky", T = contain.scrollTop >= 3360 ? "absolute" : "sticky"; document.getElementById("homeScreen2").style.position = window.innerWidth > 576 ? t : c, document.getElementById("homeScreen2").style.top = window.innerWidth > 576 ? n : e, document.getElementById("homeScreen3").style.position = window.innerWidth > 576 ? s : p, document.getElementById("homeScreen3").style.top = window.innerWidth > 576 ? l : i, document.getElementById("homeScreen4").style.position = window.innerWidth > 576 ? a : m, document.getElementById("homeScreen4").style.top = window.innerWidth > 576 ? r : d, document.getElementById("homeScreen5").style.position = window.innerWidth > 576 ? w : T, document.getElementById("homeScreen5").style.top = window.innerWidth > 576 ? y : u }), { passive: !0 })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script>
+        var scroller = {};
+        scroller.e = document.getElementById("overflox");
+
+        if (scroller.e.addEventListener) {
+            scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+            scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+        } else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+        function MouseWheelHandler(e) {
+
+
+            var e = window.event || e;
+            var delta = -1600 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+            var pst = $('#overflox').scrollLeft() + delta;
+
+
+
+            $('#overflox').animate({
+                scrollLeft: pst
+            }, 350);
+
+            return false;
+        }
+    </script>
+    <script>
+        // jQuery(document).ready(function ($) {
+        //     'use strict';
+        //     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+        //         $('.animated').appear(function () {
+        //             console.log('appear');
+        //             var elem = $(this);
+        //             var animation = elem.data('animation');
+        //             if (!elem.hasClass('visible')) {
+        //                 var animationDelay = elem.data('animation-delay');
+        //                 if (animationDelay) {
+
+        //                     setTimeout(function () {
+        //                         elem.addClass(animation + " visible");
+        //                         elem.removeClass('hiding');
+        //                     }, animationDelay);
+
+        //                 } else {
+        //                     elem.addClass(animation + " visible");
+        //                     elem.removeClass('hiding');
+        //                 }
+        //             }
+        //         });
+        //     }
+        // });
+    </script>
+    <script type="text/javascript" src="./Carrot/js/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/jquery.appear.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/jquery.prettyPhoto.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/SmoothScroll.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/jquery.parallax-1.1.3.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/owl.carousel.js"></script>
+
+    <script type="text/javascript" src="./Carrot/js/scripts.js"></script>
+
+    <script src="./Carrot/js/backscript.js"></script>
+
+    <script src="./Carrot/js/viewport.js"></script>
+    <script src="./countdown 2/js/script.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Calling Slick Library -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script>
+        onscroll = () => {
+
+        }
+    </script> -->
+    <!-- <script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.input-wrapper {
+  display: block;
+  font-family: 'AvenirNextBold', sans-serif;
+	font-weight: 600;
+     width: 80%;
+  > input,
+  > .placeholder {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  > .placeholder {
+    pointer-events: none;
+    @include typed(
+      "FOCUS YOUR CRYPTO TRADING WITH",
+      "THE ALL-IN-ONE PLATFORM ",
+      "FOR MORE INTELLIGENT TRADING",
+      1.5,
+      (
+        caret-width: 2px,
+        caret-space: 2px
+      )
+    );
+  }
+  > input {
+    &:focus,
+    &:active {
+      + .placeholder {
+        display: none;
+      }
+    }
+  }
+}
+
+

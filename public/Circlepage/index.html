@@ -1,0 +1,298 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../countdown 2/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Carrot App</title>
+    <style>
+        .playbtn {
+            width: 100%;
+            /* padding: 14rem; */
+            margin: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #37323E;
+            /* filter: drop-shadow(0rem .4rem 0.25rem #37323E); */
+        }
+
+        .bgimg {
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            background-image: url('./video_bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carrot {
+            width: 400px;
+        }
+
+        @media (max-width:720px) {
+            /* .carrot {
+                width: 40%;
+            } */
+
+            /* .playbtn {
+                width: 100%;
+                height: 100%;
+            } */
+
+            .bgimg {
+                background-size: 65rem;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width:439px) {
+            .carrot {
+                width: 80%;
+            }
+
+            .playbtn {
+                height: 400px
+            }
+
+            .bgimg {
+                background-size: 30rem;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+
+
+        @media (max-width:1400px) {
+            .imgoverflow {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+                height: 23rem;
+                margin: auto;
+            }
+        }
+
+        .para {
+            font-size: 1.8rem;
+            font-family: flink bold;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        #navigationbar1 {
+            position: fixed;
+            width: 100%;
+            z-index: 1199;
+        }
+
+        nav label i {
+            font-size: 40px;
+            /* color: rgb(128, 125, 125); */
+            color: #fff;
+            opacity: 0.2;
+        }
+
+        /* .section {
+            height: 2000px;
+            border: 5px solid black;
+            background-color: #F07E13;
+            position: relative;
+            top: 150px;
+            transition: all 0s;
+        } */
+
+        .presaletext {
+            font-size: 55px;
+            font-family: flink regular;
+        }
+
+        .presaledate {
+            font-size: 70px;
+            font-weight: 700;
+            font-family: flink bold;
+        }
+
+
+
+        @media (max-width:620px) {
+            .presaletext {
+                font-size: 35px
+            }
+
+            .presaledate {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+        }
+
+        /* start cta1 css */
+
+
+        #overflox {
+
+            overflow-y: hidden;
+            width: 100%;
+            height: 100%;
+            overflow-x: scroll;
+            cursor: pointer;
+        }
+
+        #overflox::-webkit-scrollbar {
+            display: none;
+        }
+
+        #section9contain::-webkit-scrollbar {
+            display: none;
+        }
+
+        .ctaover {
+            width: 200%;
+        }
+
+
+
+
+
+
+
+        /* #document {
+            display: none;
+        } */
+
+        #loading {
+            height: 100vh;
+            width: 100%;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: fixed;
+            z-index: 1300;
+            background-color: #fff;
+            transition-delay: 1s;
+            transition-property: height;
+            padding-top: 200px;
+        }
+
+
+        .linkhover:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* end css cta2 */
+    </style>
+    <link rel="stylesheet" href="../Carrot/css/animate.min.css" />
+    <link rel="stylesheet" href="../Carrot/css/bootstrap.css" />
+    <link rel="stylesheet" href="../Carrot/css/parallax.css" />
+    <link rel="stylesheet" href="../Carrot/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../Carrot/vendor/animate/animate.css">
+</head>
+
+<body>
+    <div class="section" data-bg="white">
+        <div class="tabs animated" data-animation="zoomIn" data-animation-delay="200">
+            <div class="white-cta">
+                <img src="../Carrot/images/cta-icon-secure.png" width="200" height="200" alt="" />
+                <h2>100% Secure
+                </h2>
+                <p>Contract code fully audited by <strong>Solid Proof</strong> and shown to be 100% secure</p>
+
+                <div class="facta"><i class="fa-solid fa-circle-down fa-beat"></i></div>
+                <div class="linkcta"> <a href="#">download audit</a></div>
+            </div>
+        </div>
+        <div class="tabs-right animated" data-animation="bounceIn" data-animation-delay="200">
+            <div class="white-cta">
+                <img src="../Carrot/images/cta-icon-verified.png" width="200" height="200" alt="" />
+                <h2>100% VERIFIED
+                </h2>
+                <p>Team fully verified by <strong>Coinsniper</strong> to ensure anti-rug and complete project security
+                </p>
+
+                <div class="facta"><i class="fa-solid fa-circle-down fa-beat"></i></div>
+                <div class="linkcta"> <a href="#">download whitepaper</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-bg="#d9783a">
+        <div class="tabs animated" data-animation="zoomIn" data-animation-delay="600">
+            <div class="orange-cta">
+                <h2>Join our presale
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <div class="facta-orange"><i class="fa-sharp fa-solid fa-circle-right fa-beat"></i> <a href="#">start
+                        now</a>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-right animated" data-animation="bounceIn" data-animation-delay="800">
+            <div class="orange-cta">
+                <h2>get in early with carrot presale
+                </h2>
+                <div class="facta-orange">
+                    <i class="fa-brands fa-ethereum fa-bounce"></i> <a href="#">Buy with ETH</a>
+                </div>
+                <div class="facta-orange">
+                    <i class="fa-brands fa-cc-visa fa-flip" style="--fa-animation-duration: 3s;"></i> <a href="#">Buy
+                        ETH with card</a>
+                </div>
+                <div class="facta-orange">
+                    <i class="fa-solid fa-circle-dollar-to-slot fa-shake"></i> <a href="#">Buy with USDT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../Carrot/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../Carrot/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../Carrot/js/jquery.appear.js"></script>
+    <script type="text/javascript" src="../Carrot/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../Carrot/js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="../Carrot/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="../Carrot/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="../Carrot/js/scripts.js"></script>
+    <script src="../Carrot/js/backscript.js"></script>
+    <script src="../Carrot/js/viewport.js"></script>
+
+
+    <script src="../countdown 2/js/script.js">
+
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Calling Slick Library -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script>
+        onscroll = () => {
+
+        }
+    </script> -->
+    <!-- <script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+</html>

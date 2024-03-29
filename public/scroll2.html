@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./countdown 2/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="stylesheet" href="./Carrot/css/animate.min.css" />
+
+
+        <link rel="stylesheet" href="./Carrot/css/parallax.css" />
+        <link rel="stylesheet" href="./Carrot/css/responsive.css" />
+
+        <link rel="stylesheet" type="text/css" href="./Carrot/vendor/animate/animate.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <title>Scroll down</title>
+
+        <style>
+            .playbtn {
+                width: 100%;
+                /* padding: 14rem; */
+                margin: auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #37323E;
+                /* filter: drop-shadow(0rem .4rem 0.25rem #37323E); */
+            }
+
+            .bgimg {
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                background-image: url('./video_bg.png');
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .carrot {
+                width: 400px;
+            }
+
+            @media (max-width:720px) {
+                /* .carrot {
+                width: 40%;
+            } */
+
+                /* .playbtn {
+                width: 100%;
+                height: 100%;
+            } */
+
+                .bgimg {
+                    background-size: 65rem;
+                    background-position: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            @media (max-width:439px) {
+                .carrot {
+                    width: 80%;
+                }
+
+                .playbtn {
+                    height: 400px
+                }
+
+                .bgimg {
+                    background-size: 30rem;
+                    background-position: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+
+
+
+
+
+
+            /* #navigationbar1 {
+            position: fixed;
+            width: 100%;
+            z-index: 1199;
+        } */
+
+            nav label i {
+                font-size: 40px;
+                /* color: rgb(128, 125, 125); */
+                color: #fff;
+                opacity: 0.2;
+            }
+
+            /* .section {
+            height: 2000px;
+            border: 5px solid black;
+            background-color: #F07E13;
+            position: relative;
+            top: 150px;
+            transition: all 0s;
+        } */
+
+            .presaletext {
+                font-size: 55px;
+                font-family: flink regular;
+            }
+
+            .presaledate {
+                font-size: 70px;
+                font-weight: 700;
+                font-family: flink bold;
+            }
+
+
+
+            @media (max-width:620px) {
+                .presaletext {
+                    font-size: 35px
+                }
+
+                .presaledate {
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+
+            }
+
+            /* start cta1 css */
+
+
+            #overflox {
+
+                overflow-y: hidden;
+                width: 100%;
+                height: 100%;
+                overflow-x: scroll;
+                cursor: pointer;
+            }
+
+            #overflox::-webkit-scrollbar {
+                display: none;
+            }
+
+            #section9contain::-webkit-scrollbar {
+                display: none;
+            }
+
+            .ctaover {
+                width: 200%;
+            }
+
+
+
+
+
+
+
+            /* #document {
+            display: none;
+        } */
+
+            #loading {
+                height: 100vh;
+                width: 100%;
+                /* display: flex;
+            justify-content: center;
+            align-items: center; */
+                position: fixed;
+                z-index: 1300;
+                background-color: #fff;
+                transition-delay: 1s;
+                transition-property: height;
+                padding-top: 200px;
+            }
+
+
+            .linkhover:hover {
+                border-bottom: 2px solid #fff;
+            }
+
+            /* end css cta2 */
+
+        </style>
+
+    </head>
+
+
+<body style="background-color: #F07E13;">
+    <div id="sector1" style=" overflow-y:hidden ;overflow-x: scroll;">
+            <h1 class=" feature text-center" style="font-weight:800;padding-top: 3rem; font-family:flink black;">
+                <b>Key</b> <span class="text-white">Features</span></h1>
+    
+            <div style="display: flex ;justify-content:center ;align-items:center ; width:100% ; 
+            height: 80vh; padding: 0px 20px; " 
+                class="container-fluid m-0 section-1 text-center" >
+    
+    
+    
+    
+    
+                <div class="row">
+                    <div
+                        style="display: flex ;justify-content:center ;align-items:center ; width:100% ; margin-left:700px;">
+    
+                        <div class="card1 text-center" style="height:500px;margin:0px 5rem ;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-person-to-portal fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0">
+                                <span class="card-title my-4 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Client<br />
+                                        portal</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">As a
+                                    client this will enable you to track any research projects you have in
+                                    action,request realtime research from our taste algorithm and track any brand in
+                                    the
+                                    community.</p>
+                            </div>
+                        </div>
+    
+    
+    
+    
+                        <div class="card1 text-center" style="height:500px;margin-right:4rem ;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-briefcase fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title mt-5 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Tastemaker<br />
+                                        portal</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">As a
+                                    tastemaker you will be able to keep track of your rewards,request for
+                                    opinions,see
+                                    brand offer and how accurate you opinion has been</p>
+                            </div>
+                        </div>
+    
+    
+    
+    
+    
+                        <div class="card1 text-center" style="height:500px;">
+                            <div style="justify-content: center;display:flex;align-items:center;">
+                                <div class="fontcontainer"><i class="fa-solid fa-radar fa-beat featureicons"
+                                        style="color:#F07E13;"></i></div>
+                            </div>
+                            <div class="card-body" style="padding:20px 0 0 0"><span class="card-title my-2 featuretext"
+                                    style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Research<br />
+                                        Builder</b></span>
+                                <p class="card-text mt-3"
+                                    style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">Our
+                                    research builder enables you to creat a market research project through a few
+                                    simple
+                                    steps. Simply define your target audience silos, product type,type of audience
+                                    and
+                                    the specific question you wish to ask and we'll action it within 72 hours.</p>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+                <div style="padding: 0px 20px;">
+                    <div class="row">
+                        <div
+                            style="display: flex ;justify-content:center ;align-items:center ; width:100% ; margin-left:445px;margin-right: 200px;">
+    
+                            <div>
+                                <div class="card1 text-center" style="height:500px;margin-right: 8rem;">
+                                    <div style="justify-content: center;display:flex;align-items:center;">
+                                        <div class="fontcontainer"><i
+                                                class="fa-solid fa-square-root-variable fa-beat featureicons"
+                                                style="color:#F07E13;"></i></div>
+                                    </div>
+                                    <div class="card-body" style="padding:20px 0 0 0"><span
+                                            class="card-title my-2 featuretext"
+                                            style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Taste<br />
+                                                Algorithm</b></span>
+                                        <p class="card-text mt-3 featuretext"
+                                            style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">A
+                                            continually evolving codebase, our taste algorithm is a machine learning tool
+                                            which
+                                            is trained by ( eventually ) millions of opinions. It enables us to deliver an
+                                            instant snapshot opinion on products and services, with manual research groups
+                                            available as a follow on.</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+                            <div>
+    
+                                <div class="card1 text-center" style="height:500px;">
+                                    <div style="justify-content: center;display:flex;align-items:center;">
+                                        <div class="fontcontainer"><i
+                                                class="fa-sharp fa-solid fa-passport fa-beat featureicons"
+                                                style="color:#F07E13;"></i></div>
+                                    </div>
+                                    <div class="card-body" style="padding:20px 0 0 0"><span
+                                            class="card-title my-2 featuretext"
+                                            style="color:#fff;font-weight:800;font-family:flink bold;font-size: 38px;line-height: 40px;text-transform:uppercase;"><b>Taste<br />
+                                                Passport</b></span>
+                                        <p class="card-text mt-3 featuretext"
+                                            style="color:#fff;font-size:18px;font-weight:650;font-family:flink regular">By
+                                            curating anonymised, permissioned opinion we provide marketers with a new data
+                                            source - qualified, verified opinion. Unlike the last wave of internet giants,
+                                            who
+                                            shared none of their revenue with their users, we’ll pass the majority of income
+                                            to
+                                            you via your taste passport.</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+    
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+    
+            </div>
+
+
+
+
+
+
+ 
+
+
+<script src="https://kit.fontawesome.com/97c8afbec4.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
